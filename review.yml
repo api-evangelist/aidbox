@@ -1,0 +1,188 @@
+aid: aidbox
+name: Aidbox
+review:
+  question: Does Aidbox expose a documented public developer surface with a machine-readable API contract?
+  answer: true
+  date: '2026-07-24'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Aidbox (by Health Samurai) is a production-ready FHIR platform and clinical
+    data backend built on PostgreSQL. It is self-hosted or Aidbox-hosted software
+    rather than a single public multi-tenant API, so each deployment serves its own
+    FHIR base URL and its own FHIR CapabilityStatement. Documentation is a real,
+    open, self-serve developer portal at https://www.health-samurai.io/docs/aidbox
+    (docs.aidbox.app redirects there). A public sandbox at https://sandbox.aidbox.app
+    serves a LIVE FHIR R4 CapabilityStatement and SMART-on-FHIR / OpenID
+    .well-known configuration anonymously. The documented API surface is HL7 FHIR
+    REST (R4/R5/R6) plus Aidbox-native SQL search, SQL-on-FHIR, GraphQL, Bulk Data,
+    topic-based Subscriptions, and Terminology. Home market: United States (also
+    global). Building a production application requires provisioning an Aidbox
+    license/instance, so the running FHIR endpoint is deployment-gated, but the docs
+    and sandbox are open and self-serve.
+  developerPortal:
+    url: https://www.health-samurai.io/docs/aidbox
+    httpStatus: 200
+    confirmedLive: true
+    note: >-
+      Open, un-gated documentation portal. docs.aidbox.app (200) redirects to this
+      health-samurai.io/docs/aidbox path.
+  fhirCapabilityStatement:
+    captured: true
+    fhirVersion: 4.0.1
+    kind: instance
+    resourceCount: 138
+    source: https://sandbox.aidbox.app/fhir/metadata
+    httpStatus: 200
+    savedTo: fhir/aidbox-capabilitystatement.json
+    note: >-
+      Harvested verbatim from the public Aidbox sandbox (application/fhir+json,
+      ~390 KB). Docs state R4, R5, and R6 are supported; the sandbox metadata
+      returned is FHIR R4 (4.0.1). Resource list includes US-relevant clinical and
+      payer resources (Patient, Encounter, Observation, Condition, MedicationRequest,
+      Coverage, Claim, ExplanationOfBenefit, CoverageEligibilityRequest/Response,
+      DocumentReference, DiagnosticReport, and 120+ more).
+  smartConfiguration:
+    captured: true
+    source: https://sandbox.aidbox.app/.well-known/smart-configuration
+    httpStatus: 200
+    savedTo: fhir/aidbox-smart-configuration.json
+    issuer: https://sandbox.aidbox.app
+    authorizationEndpoint: https://sandbox.aidbox.app/auth/authorize
+    tokenEndpoint: https://sandbox.aidbox.app/auth/token
+    capabilities:
+    - launch-ehr
+    - launch-standalone
+    - client-confidential-symmetric
+    - client-confidential-asymmetric
+    - client-public
+    - permission-patient
+    - permission-user
+    - sso-openid-connect
+    - context-ehr-patient
+    - context-ehr-encounter
+    - authorize-post
+    scopesSupported:
+    - openid
+    - profile
+    - email
+    - launch
+    - launch/patient
+    - patient/*.cruds
+    - user/*.cruds
+    - system/*.cruds
+    - fhirUser
+    - offline_access
+    - online_access
+    note: >-
+      Aidbox uses SMART v2-style granular scope syntax (.cruds). Also serves a
+      standard OpenID .well-known/openid-configuration (saved to
+      fhir/aidbox-openid-configuration.json).
+  downloadableSpecs:
+    openapiFound: false
+    count: 3
+    provenance:
+    - artifact: fhir/aidbox-capabilitystatement.json
+      type: FHIR CapabilityStatement
+      source: https://sandbox.aidbox.app/fhir/metadata
+      httpStatus: 200
+    - artifact: fhir/aidbox-smart-configuration.json
+      type: SMART-on-FHIR well-known configuration
+      source: https://sandbox.aidbox.app/.well-known/smart-configuration
+      httpStatus: 200
+    - artifact: fhir/aidbox-openid-configuration.json
+      type: OpenID Connect discovery configuration
+      source: https://sandbox.aidbox.app/.well-known/openid-configuration
+      httpStatus: 200
+    note: >-
+      No static OpenAPI/Swagger document is published at the sandbox root or docs
+      host (probed /openapi.json, /$openapi, /api-docs -> 404). Aidbox generates
+      OpenAPI per-instance behind the running box; the FHIR CapabilityStatement is
+      the canonical machine-readable contract and was harvested verbatim.
+  authModel:
+    scheme: OAuth 2.0 / SMART-on-FHIR
+    grantTypes:
+    - authorization_code
+    - client_credentials
+    - urn:ietf:params:oauth:grant-type:token-exchange
+    - implicit
+    - password
+    pkce:
+    - S256
+    note: >-
+      SMART App Launch (EHR + standalone), OAuth2 client-credentials for
+      system-to-system, and OpenID Connect SSO. Patient/user/system scopes.
+  standardsConformance:
+    hl7Fhir:
+    - R4 (4.0.1, confirmed via sandbox CapabilityStatement)
+    - R5 (per docs)
+    - R6 (per docs)
+    smartOnFhir: true
+    smartAppLaunch: true
+    bulkData: true
+    usCore:
+      claimed: partial
+      note: >-
+        Aidbox supports US Core and other Implementation Guides via FHIR
+        Implementation Guide / profiling packages; conformance depends on which IG
+        packages a given deployment loads. Not asserted from the base sandbox
+        CapabilityStatement.
+    daVinci: not-asserted
+    carin: not-asserted
+    ukCore: not-asserted
+    auCore: not-asserted
+  homeMarket: United States
+  accessPosture:
+    docs: open-self-serve
+    sandbox: open-anonymous
+    production: deployment-gated (Aidbox license / self-host or Aidbox-hosted instance)
+  transports:
+  - protocol: REST
+    scheme: https
+    baseURL: https://sandbox.aidbox.app/fhir
+    documented: true
+    note: HL7 FHIR REST API. Base URL is per-deployment; sandbox shown as the public example.
+  - protocol: GraphQL
+    scheme: https
+    documented: true
+    note: GraphQL API over FHIR data.
+  - protocol: Subscriptions
+    scheme: https
+    documented: true
+    note: FHIR topic-based Subscriptions deliver notifications across multiple channels.
+  - protocol: WebSocket
+    scheme: wss
+    documented: false
+    note: >-
+      Aidbox documents FHIR topic-based Subscriptions (including a WebSocket channel
+      for subscription delivery in some configurations), but no general-purpose
+      public WebSocket API is documented as the primary transport; the primary
+      surface is FHIR REST.
+sources:
+- url: https://www.health-samurai.io/docs/aidbox
+  type: DeveloperPortal
+  httpStatus: 200
+  note: Open Aidbox documentation portal (developer portal).
+- url: https://sandbox.aidbox.app/fhir/metadata
+  type: CapabilityStatement
+  httpStatus: 200
+  note: Live FHIR R4 (4.0.1) CapabilityStatement, 138 resources; harvested verbatim.
+- url: https://sandbox.aidbox.app/.well-known/smart-configuration
+  type: SMARTConfiguration
+  httpStatus: 200
+  note: SMART-on-FHIR discovery; scopes and launch capabilities harvested.
+- url: https://sandbox.aidbox.app/.well-known/openid-configuration
+  type: OpenIDConfiguration
+  httpStatus: 200
+  note: OpenID Connect discovery configuration; harvested verbatim.
+- url: https://www.health-samurai.io/docs/aidbox/api-1/api
+  type: APIReference
+  httpStatus: 200
+  note: API overview enumerating FHIR REST, search, SQL-on-FHIR, GraphQL, Bulk, Subscriptions.
+- url: https://www.health-samurai.io/fhir-server
+  type: Website
+  httpStatus: 200
+  note: Product page describing FHIR R4/R5/R6 backend on PostgreSQL.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

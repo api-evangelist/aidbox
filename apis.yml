@@ -1,0 +1,180 @@
+aid: aidbox
+url: https://raw.githubusercontent.com/api-evangelist/aidbox/refs/heads/main/apis.yml
+name: Aidbox
+kind: company
+description: >-
+  Aidbox is a production-ready FHIR platform and clinical data backend from Health
+  Samurai, used by digital health startups, providers, payers, and life-sciences
+  teams to build interoperable healthcare products in the United States and globally.
+  Built on PostgreSQL, Aidbox exposes a full HL7 FHIR REST API (R4, R5, and R6) plus
+  Aidbox-native SQL search, SQL-on-FHIR, a GraphQL API, Bulk Data export/import,
+  topic-based Subscriptions, and terminology services. It is self-hosted or
+  Aidbox-hosted software rather than a single public multi-tenant endpoint, so each
+  deployment serves its own FHIR base and its own CapabilityStatement; a public
+  sandbox (sandbox.aidbox.app) exposes a live FHIR R4 CapabilityStatement and a
+  SMART-on-FHIR / OpenID .well-known configuration. Authentication is OAuth 2.0 with
+  SMART-on-FHIR support (patient/user/system scopes, EHR and standalone launch,
+  client-confidential and client-public flows). Aidbox aligns with US interoperability
+  needs (US Core, SMART App Launch, Bulk Data) and is HIPAA-oriented, HITRUST and
+  SOC 2 focused. This profile catalogs the documented, real API surface only.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- United States
+- FHIR
+- HL7
+- Interoperability
+- SMART on FHIR
+- EHR
+- Health Data
+- FHIR Server
+- Bulk Data
+- Terminology
+- Digital Health
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis:
+- aid: aidbox:aidbox-fhir-api
+  name: Aidbox FHIR API
+  description: >-
+    Aidbox's HL7 FHIR REST API for creating, reading, updating, deleting, and searching
+    clinical and administrative resources. Supports FHIR R4 (4.0.1), R5, and R6, with
+    standard FHIR interactions, transaction/batch bundles, and operations such as
+    $validate, $everything, $document, and $lastn. The live public sandbox exposes a
+    FHIR R4 CapabilityStatement listing 138 supported resource types at
+    sandbox.aidbox.app/fhir/metadata.
+  humanURL: https://www.health-samurai.io/docs/aidbox/api-1/fhir-api
+  baseURL: https://sandbox.aidbox.app/fhir
+  tags:
+  - FHIR
+  - Healthcare
+  - Interoperability
+  properties:
+  - type: Documentation
+    url: https://www.health-samurai.io/docs/aidbox/api-1/fhir-api
+  - type: APIReference
+    url: https://www.health-samurai.io/docs/aidbox/api-1/api
+  - type: CapabilityStatement
+    url: fhir/aidbox-capabilitystatement.json
+  - type: SMARTConfiguration
+    url: fhir/aidbox-smart-configuration.json
+- aid: aidbox:aidbox-rest-search-api
+  name: Aidbox REST & Search API
+  description: >-
+    Aidbox-native REST and search API offering CRUD over resources plus SQL-based
+    search implementations for performance optimization and complex custom queries
+    beyond standard FHIR search parameters.
+  humanURL: https://www.health-samurai.io/docs/aidbox/api-1/rest-api/aidbox-search
+  baseURL: https://sandbox.aidbox.app
+  tags:
+  - Healthcare
+  - Search
+  properties:
+  - type: Documentation
+    url: https://www.health-samurai.io/docs/aidbox/api-1/rest-api/aidbox-search
+  - type: APIReference
+    url: https://www.health-samurai.io/docs/aidbox/api-1/api
+- aid: aidbox:aidbox-sql-on-fhir-api
+  name: Aidbox SQL-on-FHIR API
+  description: >-
+    SQL-on-FHIR support that lets clients run SQL queries directly against FHIR data,
+    treating FHIR resources as relational tables for analytics and reporting.
+  humanURL: https://www.health-samurai.io/docs/aidbox/modules/sql-on-fhir
+  baseURL: https://sandbox.aidbox.app
+  tags:
+  - Healthcare
+  - SQL
+  - Analytics
+  properties:
+  - type: Documentation
+    url: https://www.health-samurai.io/docs/aidbox/modules/sql-on-fhir
+- aid: aidbox:aidbox-graphql-api
+  name: Aidbox GraphQL API
+  description: >-
+    A GraphQL API over FHIR data that lets clients request exactly the data they need
+    across related resources in a single call.
+  humanURL: https://www.health-samurai.io/docs/aidbox/api-1/graphql-api
+  baseURL: https://sandbox.aidbox.app
+  tags:
+  - Healthcare
+  - GraphQL
+  properties:
+  - type: Documentation
+    url: https://www.health-samurai.io/docs/aidbox/api-1/graphql-api
+- aid: aidbox:aidbox-bulk-data-api
+  name: Aidbox Bulk Data API
+  description: >-
+    FHIR Bulk Data API for large-scale export and import of FHIR resources, including
+    $export, FHIR import/load, and dump utilities for moving datasets in and out of
+    Aidbox.
+  humanURL: https://www.health-samurai.io/docs/aidbox/api-1/bulk-api/export
+  baseURL: https://sandbox.aidbox.app
+  tags:
+  - Healthcare
+  - Bulk Data
+  - FHIR
+  properties:
+  - type: Documentation
+    url: https://www.health-samurai.io/docs/aidbox/api-1/bulk-api/export
+- aid: aidbox:aidbox-subscriptions-api
+  name: Aidbox Topic-Based Subscriptions API
+  description: >-
+    FHIR topic-based Subscriptions that deliver notifications on changes to FHIR
+    resources through multiple channels for event-driven healthcare integrations.
+  humanURL: https://www.health-samurai.io/docs/aidbox/modules/topic-based-subscriptions
+  baseURL: https://sandbox.aidbox.app
+  tags:
+  - Healthcare
+  - Subscriptions
+  - Notifications
+  properties:
+  - type: Documentation
+    url: https://www.health-samurai.io/docs/aidbox/modules/topic-based-subscriptions
+- aid: aidbox:aidbox-terminology-api
+  name: Aidbox Terminology API
+  description: >-
+    Terminology services for working with FHIR CodeSystems, ValueSets, and ConceptMaps,
+    including validation and lookup against clinical terminologies.
+  humanURL: https://www.health-samurai.io/docs/aidbox/modules/terminology
+  baseURL: https://sandbox.aidbox.app
+  tags:
+  - Healthcare
+  - Terminology
+  properties:
+  - type: Documentation
+    url: https://www.health-samurai.io/docs/aidbox/modules/terminology
+common:
+- type: Website
+  url: https://www.health-samurai.io/
+- type: DeveloperPortal
+  url: https://www.health-samurai.io/docs/aidbox
+- type: Documentation
+  url: https://www.health-samurai.io/docs/aidbox
+- type: APIReference
+  url: https://www.health-samurai.io/docs/aidbox/api-1/api
+- type: GettingStarted
+  url: https://www.health-samurai.io/docs/aidbox/getting-started
+- type: Pricing
+  url: https://www.health-samurai.io/docs/aidbox/getting-started/editions-and-pricing
+- type: Blog
+  url: https://www.health-samurai.io/blog
+- type: StatusPage
+  url: https://status.aidbox.app/
+- type: GitHubOrganization
+  url: https://github.com/Aidbox
+- type: LinkedIn
+  url: https://www.linkedin.com/company/health-samurai/
+- type: Security
+  url: https://www.health-samurai.io/docs/aidbox/modules/security-and-access-control
+- type: PrivacyPolicy
+  url: https://www.health-samurai.io/legal/privacy-policy
+- type: SMARTConfiguration
+  url: fhir/aidbox-smart-configuration.json
+- type: OpenIDConfiguration
+  url: fhir/aidbox-openid-configuration.json
+- type: CapabilityStatement
+  url: fhir/aidbox-capabilitystatement.json
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

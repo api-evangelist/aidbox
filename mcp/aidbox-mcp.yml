@@ -1,0 +1,50 @@
+generated: '2026-07-24'
+method: searched
+status: published
+source: https://www.health-samurai.io/docs/aidbox/modules/other-modules/mcp
+note: >-
+  Aidbox ships a first-party MCP server as a built-in module (since v2505, alpha).
+  It is not a separate hosted endpoint - it runs inside every Aidbox deployment and is
+  reached at that box's own base URL. The public sandbox (sandbox.aidbox.app) does not
+  expose /mcp anonymously, so live tools/list introspection returns 404 there; tool
+  names and descriptions below are captured verbatim from the module documentation.
+server:
+  name: aidbox-mcp
+  transport: [streamable-http, sse]
+  endpoint: "<aidbox-base-url>/mcp"
+  alias_endpoint: "<aidbox-base-url>/sse"
+  message_endpoint: "<aidbox-base-url>/mcp/<mcp-client-id>/messages"
+  streamable_http_since: '2606'
+  min_version: '2505'
+  authentication: >-
+    Optional. Public endpoints require no credentials; restricted endpoints require a
+    Bearer token governed by Aidbox AccessPolicy and Client configuration.
+tools:
+- name: read-fhir-resource
+  description: Read an individual FHIR resource
+  fhir_interaction: read
+- name: create-fhir-resource
+  description: Create a new FHIR resource
+  fhir_interaction: create
+- name: update-fhir-resource
+  description: Update an existing FHIR resource
+  fhir_interaction: update
+- name: conditional-update-fhir-resource
+  description: Conditional update an existing FHIR resource
+  fhir_interaction: conditional-update
+- name: conditional-patch-fhir-resource
+  description: Conditional patch an existing FHIR resource
+  fhir_interaction: conditional-patch
+- name: patch-fhir-resource
+  description: Patch an existing FHIR resource
+  fhir_interaction: patch
+- name: delete-fhir-resource
+  description: Delete an existing FHIR resource
+  fhir_interaction: delete
+- name: search-fhir-resources
+  description: Search an existing FHIR resources
+  fhir_interaction: search-type
+- name: validate-fhir-resource
+  description: Validate FHIR resource
+  fhir_interaction: "$validate"
+  since: '2509'

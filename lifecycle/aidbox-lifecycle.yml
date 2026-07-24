@@ -1,0 +1,29 @@
+generated: '2026-07-24'
+method: searched
+source: >-
+  https://www.health-samurai.io/docs/aidbox/overview/versioning,
+  https://www.health-samurai.io/docs/aidbox/overview/release-notes, https://status.aidbox.app/
+versioning:
+  scheme: calver
+  format: MAJOR.MINOR where MAJOR = YYMM (e.g. 2606 = June 2026), MINOR increments from 0
+  since: '2024-10'
+  current: '2606'
+  docs: https://www.health-samurai.io/docs/aidbox/overview/versioning
+release_channels:
+- name: edge
+  description: Most recent build, published after every successful commit; for staging/dev.
+- name: latest
+  description: Latest monthly release.
+- name: stable
+  description: LTS-designated release recommended for production.
+deprecation:
+  policy_url: https://www.health-samurai.io/docs/aidbox/overview/release-notes
+  approach: >-
+    Removals and migrations are announced in dated monthly release notes with migration
+    timelines (e.g. legacy validation engines removed; MPI $match moved to MDMbox in 2606).
+  sunset_header: unknown
+sla:
+  note: SLA is contract/edition-specific (Enterprise); no single public uptime SLA published.
+status_page: https://status.aidbox.app/
+fhir_versions_supported: [R4 (4.0.1), R5, R6]
+deprecated_operations: []

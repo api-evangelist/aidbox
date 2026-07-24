@@ -1,0 +1,34 @@
+generated: '2026-07-24'
+method: searched
+spec_type: Webhooks
+source: >-
+  https://www.health-samurai.io/docs/aidbox/modules/topic-based-subscriptions,
+  https://www.health-samurai.io/docs/aidbox/overview/release-notes
+note: >-
+  Aidbox exposes an event surface via FHIR Topic-Based Subscriptions (R4B/R5 Subscriptions
+  Backport) and Aidbox-native SubscriptionTopic + AidboxTopicDestination. No standalone
+  AsyncAPI document is published, so this captures the webhook/streaming catalog. NEVER
+  fabricated - destinations are drawn verbatim from the documentation and release notes.
+event_model:
+  standard: FHIR Subscriptions (topic-based) + Aidbox SubscriptionTopic
+  trigger: Changes (create/update/delete) to FHIR resources matching a SubscriptionTopic.
+  payload: FHIR R4B/R5 SubscriptionStatus notification Bundle (id-only, full-resource, or empty).
+channels:
+- type: rest-hook
+  detail: HTTP(S) webhook POST to a subscriber endpoint (classic FHIR rest-hook channel).
+- type: websocket
+  detail: WebSocket delivery channel.
+destinations:
+  description: Aidbox-native AidboxTopicDestination sinks for event delivery beyond rest-hook.
+  sinks:
+  - kafka
+  - webhook
+  - Amazon SNS
+  - AWS EventBridge
+  - Google BigQuery
+  - Databricks Delta table
+  - Google Cloud Pub/Sub
+  custom: Custom AidboxTopicDestination code can access both previous and current resource versions.
+security:
+  note: Subscription endpoints authenticated per Aidbox Client/AccessPolicy; destinations use their own cloud credentials.
+docs: https://www.health-samurai.io/docs/aidbox/modules/topic-based-subscriptions

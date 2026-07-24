@@ -1,0 +1,43 @@
+generated: '2026-07-24'
+method: searched
+source: well-known/aidbox-smart-configuration.json (scopes_supported) + SMART App Launch scope syntax
+docs: https://www.health-samurai.io/docs/aidbox/modules/security-and-access-control/auth/smart-on-fhir
+schemes:
+- name: SMART-on-FHIR / OAuth2
+  authorizationUrl: https://sandbox.aidbox.app/auth/authorize
+  tokenUrl: https://sandbox.aidbox.app/auth/token
+  flows: [authorizationCode, clientCredentials, implicit, password]
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; issue an id_token.
+- scope: profile
+  description: Access to the user's basic profile claims.
+- scope: email
+  description: Access to the user's email claim.
+- scope: groups
+  description: Access to the user's group memberships.
+- scope: fhirUser
+  description: Return a fhirUser claim identifying the current user as a FHIR resource.
+- scope: launch
+  description: EHR launch context (requires an EHR launch).
+- scope: launch/patient
+  description: Standalone launch requesting patient context selection.
+- scope: offline_access
+  description: Issue a refresh token for long-lived access (permission-offline).
+- scope: online_access
+  description: Refresh token valid only while the user's session is active.
+- scope: patient/*.cruds
+  description: >-
+    Patient-compartment access to all resource types (SMART v2 CRUDS = create, read,
+    update, delete, search). Narrowable per resource, e.g. patient/Observation.rs.
+- scope: user/*.cruds
+  description: User-level access to all resource types the user is permitted to see (SMART v2).
+- scope: system/*.cruds
+  description: System/backend-services access to all resource types (SMART Backend Services, v2).
+smart_scope_syntax:
+  versions: [v1, v2]
+  v1_examples: [patient/Observation.read, user/*.read, system/Patient.write]
+  v2_actions: c=create, r=read, u=update, d=delete, s=search
+  note: >-
+    Aidbox supports both SMART v1 (.read/.write/.*) and v2 (.cruds granular) scope syntaxes;
+    scopes_supported in the sandbox smart-configuration advertises the wildcard *.cruds forms.

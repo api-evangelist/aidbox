@@ -1,0 +1,53 @@
+generated: '2026-07-24'
+method: derived
+format: fhir-operationoutcome
+source: >-
+  HL7 FHIR R4 HTTP status semantics as implemented by Aidbox + observed sandbox responses
+  (e.g. login-required OperationOutcome from sandbox.aidbox.app).
+envelope:
+  resourceType: OperationOutcome
+  content_type: application/fhir+json
+  shape: issue[] with severity (fatal|error|warning|information), code, diagnostics, details.text
+note: >-
+  Aidbox surfaces API errors as HL7 FHIR OperationOutcome resources (not RFC 9457
+  problem+json). The list below maps FHIR HTTP status codes to their OperationOutcome
+  issue.code and typical cause.
+problems:
+- status: 400
+  issue_code: invalid
+  title: Invalid request / malformed resource
+  remediation: Fix the request body or search parameters; validate with $validate.
+- status: 401
+  issue_code: login
+  title: Login Required / unauthenticated
+  remediation: Present a valid OAuth2/SMART bearer token or Basic credentials.
+  observed: 'sandbox $graphql returned OperationOutcome issue.code=login "Login Required"'
+- status: 403
+  issue_code: forbidden
+  title: Access denied by AccessPolicy / insufficient scope
+  remediation: Request the required SMART scope or adjust the AccessPolicy.
+- status: 404
+  issue_code: not-found
+  title: Resource or route not found
+  remediation: Verify the resource type, id, and base path.
+  observed: 'POST /mcp on sandbox returned OperationOutcome issue.code=not-found'
+- status: 409
+  issue_code: conflict
+  title: Version conflict / concurrent update
+  remediation: Re-read the resource and retry with the current ETag.
+- status: 410
+  issue_code: deleted
+  title: Resource deleted (gone)
+  remediation: The resource version was deleted; use history if needed.
+- status: 412
+  issue_code: conflict
+  title: Precondition failed (If-Match / conditional)
+  remediation: Supply the correct meta.versionId in If-Match.
+- status: 422
+  issue_code: processing
+  title: Resource failed FHIR/profile validation
+  remediation: Correct the resource per the OperationOutcome issue details; run $validate.
+- status: 500
+  issue_code: exception
+  title: Internal server error
+  remediation: Retry; contact support if it persists.

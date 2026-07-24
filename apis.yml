@@ -33,7 +33,7 @@ tags:
 - Digital Health
 created: '2026-07-24'
 modified: '2026-07-24'
-specificationVersion: '0.19'
+specificationVersion: '0.20'
 apis:
 - aid: aidbox:aidbox-fhir-api
   name: Aidbox FHIR API
@@ -145,6 +145,8 @@ apis:
   - type: Documentation
     url: https://www.health-samurai.io/docs/aidbox/modules/terminology
 common:
+- type: DomainSecurity
+  url: security/aidbox-domain-security.yml
 - type: Website
   url: https://www.health-samurai.io/
 - type: DeveloperPortal
@@ -175,6 +177,50 @@ common:
   url: fhir/aidbox-openid-configuration.json
 - type: CapabilityStatement
   url: fhir/aidbox-capabilitystatement.json
+- type: Support
+  url: https://www.health-samurai.io/contacts
+- type: SignUp
+  url: https://aidbox.app/
+- type: Compliance
+  url: https://www.health-samurai.io/fhir-server
+- type: Authentication
+  url: authentication/aidbox-authentication.yml
+- type: OAuthScopes
+  url: scopes/aidbox-scopes.yml
+- type: Conformance
+  url: conformance/aidbox-conformance.yml
+- type: Conventions
+  url: conventions/aidbox-conventions.yml
+- type: Idempotency
+  url: conventions/aidbox-conventions.yml
+- type: ErrorCatalog
+  url: errors/aidbox-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/aidbox-lifecycle.yml
+- type: Deprecation
+  url: https://www.health-samurai.io/docs/aidbox/overview/release-notes
+- type: ChangeLog
+  url: changelog/aidbox-changelog.yml
+- type: Packages
+  url: packages/aidbox-packages.yml
+- type: SDKs
+  url: packages/aidbox-packages.yml
+- type: MCPServer
+  url: mcp/aidbox-mcp.yml
+- type: ToolCrosswalk
+  url: mcp/aidbox-tool-crosswalk.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Webhooks
+  url: asyncapi/aidbox-subscriptions-webhooks.yml
+- type: Sandbox
+  url: sandbox/aidbox-sandbox.yml
+- type: DataModel
+  url: data-model/aidbox-data-model.yml
+- type: WellKnown
+  url: well-known/aidbox-well-known.yml
+- type: LLMsTxt
+  url: llms/aidbox-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

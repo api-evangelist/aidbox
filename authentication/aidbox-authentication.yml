@@ -1,0 +1,45 @@
+generated: '2026-07-24'
+method: searched
+source: >-
+  well-known/aidbox-smart-configuration.json, well-known/aidbox-openid-configuration.json,
+  well-known/aidbox-oauth-authorization-server.json, fhir/aidbox-capabilitystatement.json,
+  https://www.health-samurai.io/docs/aidbox/modules/security-and-access-control
+docs: https://www.health-samurai.io/docs/aidbox/modules/security-and-access-control
+summary:
+  types: [oauth2, openIdConnect, http]
+  http_schemes: [basic, bearer]
+  oauth2_flows: [authorizationCode, implicit, password, clientCredentials, token-exchange]
+  smart_on_fhir: true
+  api_key_in: []
+schemes:
+- name: SMART-on-FHIR / OAuth2
+  type: oauth2
+  authorizationUrl: https://sandbox.aidbox.app/auth/authorize
+  tokenUrl: https://sandbox.aidbox.app/auth/token
+  introspectionUrl: https://sandbox.aidbox.app/auth/introspect
+  userinfoUrl: https://sandbox.aidbox.app/auth/userinfo
+  jwksUri: https://sandbox.aidbox.app/.well-known/jwks.json
+  grant_types: [authorization_code, urn:ietf:params:oauth:grant-type:token-exchange, implicit, password, client_credentials]
+  token_endpoint_auth_methods: [client_secret_post, client_secret_basic, private_key_jwt]
+  pkce: [S256]
+  launch_contexts: [launch-ehr, launch-standalone, context-ehr-patient, context-ehr-encounter, context-standalone-patient]
+  client_types: [client-confidential-symmetric, client-confidential-asymmetric, client-public]
+  note: >-
+    SMART App Launch (EHR launch + standalone launch), SMART Backend Services via
+    client_credentials + private_key_jwt (asymmetric), and OIDC single-sign-on.
+- name: OpenID Connect
+  type: openIdConnect
+  openIdConnectUrl: https://sandbox.aidbox.app/.well-known/openid-configuration
+  id_token_signing_alg: [RS256]
+  claims: [sub, aud, email, exp, iat, iss, locale, family_name, given_name, name, picture]
+- name: Basic
+  type: http
+  scheme: basic
+  note: >-
+    HTTP Basic authentication is advertised in the CapabilityStatement security service
+    list, typically for Client resources / trusted server-to-server access.
+access_control:
+  models: [AccessPolicy, RBAC, SMART scopes (v1 + v2), label-based / relationship-based, SCIM]
+  note: >-
+    Aidbox layers its own AccessPolicy engine (JSON/SQL/Matcho/allow) over SMART scopes;
+    supports permission-v1 and permission-v2 SMART scope syntaxes.

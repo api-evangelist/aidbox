@@ -1,0 +1,58 @@
+generated: '2026-07-24'
+method: searched
+source: >-
+  fhir/aidbox-capabilitystatement.json, well-known/aidbox-smart-configuration.json,
+  https://www.health-samurai.io/llms.txt, https://www.health-samurai.io/docs/aidbox
+standards:
+- id: fhir-r4
+  conforms: true
+  evidence: CapabilityStatement fhirVersion 4.0.1; sandbox exposes 138 R4 resource types.
+- id: fhir-r5
+  conforms: true
+  evidence: Aidbox supports FHIR R5 boxes (docs + release notes).
+- id: fhir-r6
+  conforms: true
+  evidence: Aidbox documents FHIR R6 support alongside R4/R5.
+- id: us-core
+  conforms: true
+  evidence: US Core profiles / IG support for US interoperability; documented and packaged.
+- id: smart-app-launch
+  conforms: true
+  evidence: smart-configuration advertises launch-ehr, launch-standalone, SSO OpenID Connect capabilities.
+- id: smart-backend-services
+  conforms: true
+  evidence: client_credentials grant + private_key_jwt (asymmetric client auth) in smart-configuration.
+- id: fhir-bulk-data
+  conforms: true
+  evidence: CapabilityStatement instantiates the HL7 bulk-data CapabilityStatement; $export supported.
+- id: sql-on-fhir
+  conforms: true
+  evidence: SQL-on-FHIR ViewDefinition support; $viewdefinition-export operation (release notes).
+- id: oauth2
+  conforms: true
+  evidence: OAuth 2.0 authorization/token endpoints; multiple grant types.
+- id: oidc
+  conforms: true
+  evidence: /.well-known/openid-configuration present; id_token RS256; standard OIDC claims.
+- id: oauth2-authorization-server-metadata-rfc8414
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns 200 with RFC 8414 metadata.
+- id: scim2
+  conforms: true
+  evidence: CapabilityStatement includes scim-search-users operation; Aidbox ships SCIM 2.0 support.
+- id: cms-0057-f
+  conforms: true
+  evidence: Payerbox module implements CMS-0057-F (Prior Auth, Patient/Provider/Payer-to-Payer APIs).
+- id: onc-g10
+  conforms: true
+  evidence: Smartbox / Aidbox FHIR API tooling has been part of ONC (g)(10) certification offerings.
+- id: iso-27001
+  conforms: true
+  evidence: Health Samurai is an ISO 27001:2022 certified organization (company llms.txt).
+- id: hipaa
+  conforms: true
+  evidence: HIPAA-aligned deployment options; audit logging; de-identification (Safe Harbor) in SQL-on-FHIR.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: FHIR APIs return HL7 OperationOutcome (application/fhir+json), not application/problem+json.
+compliance_certifications: [ISO 27001:2022, ONC (g)(10) Standardized API, HIPAA-aligned]

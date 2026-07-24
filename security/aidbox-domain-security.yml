@@ -1,0 +1,27 @@
+generated: '2026-07-24'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.health-samurai.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  1 05:15:33 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: sandbox.aidbox.app
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 27 10:30:20 2026 GMT
+  hsts: null
+domains:
+- domain: health-samurai.io
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: aidbox.app
+  dnssec: true
+  caa: []
+  spf: false
+  dmarc: false

@@ -1,0 +1,192 @@
+# Health Samurai
+
+> Health Samurai builds FHIR-native healthcare infrastructure. Our main product is Aidbox — a FHIR server and healthcare development platform used by healthcare organizations worldwide to build, deploy, and scale healthcare solutions.
+
+## Key facts
+
+- **Official YouTube channel:** [Health Samurai on YouTube](https://www.youtube.com/@HealthSamurai) — product demos, webinars, conference talks, and Aidbox / Formbox updates.
+- **Company:** Health Samurai, Inc. delivers FHIR-native platforms and professional services; team has built healthcare IT solutions since 2004.
+- **Aidbox:** Enterprise FHIR server and data platform on PostgreSQL — REST API for FHIR R4/R5, SQL on FHIR, SMART on FHIR, subscriptions, bulk data, terminology services, HIPAA-aligned deployment options. Development tier is free; production pricing is flat-rate (see [Pricing](https://www.health-samurai.io/price.md)).
+- **Formbox (Aidbox Forms):** Digital healthcare forms platform — FHIR SDC-aligned capture, no-code builder, workflows, and a large library of clinical form templates (4,000+ on the marketing site).
+- **Compliance & trust:** ISO 27001:2022 certified organization; Aidbox FHIR API tooling has been part of ONC certification (e.g. G10) offerings — see product pages for current certification scope.
+- **Open source & docs:** Aidbox-related open source on GitHub (https://github.com/Aidbox); full technical documentation at [Aidbox docs](https://www.health-samurai.io/docs/aidbox).
+
+## Videos & playlists
+
+Channel: [@HealthSamurai](https://www.youtube.com/@HealthSamurai). Key playlists:
+
+- [Aidbox Forms / Formbox — tutorials and walkthroughs](https://www.youtube.com/playlist?list=PLEOOqZS1Ntwa7hhEmPnO5BhS-8lgevfzQ) — Step-by-step guides and feature demos for Formbox.
+- [FHIR DevDays 2025 — Health Samurai talks and demos](https://www.youtube.com/playlist?list=PLEOOqZS1NtwbUhqN653j-cuGHmPfGF6ck) — Talks and demos from HL7 FHIR DevDays 2025.
+- [FHIR community interviews](https://www.youtube.com/playlist?list=PLEOOqZS1NtwaHpIABTJBtZa_ivBhEw4Sx) — Interviews with Grahame Grieve, Nikolai Ryzhikov, Lloyd McKenzie, Ewout Kramer, Maria Manuel Salazar, and others.
+- [Agents on FHIR — Agentic coding in Healthcare and FHIR](https://www.youtube.com/playlist?list=PLEOOqZS1NtwY54jljDikeRdeRM8iOMAUq) — Agentic coding and AI agents in healthcare and FHIR.
+- [Analytics on FHIR Conference (Dec 2025)](https://www.youtube.com/playlist?list=PLEOOqZS1NtwYW98ow-DppdykL3xrhqIoD) — Analytics on FHIR Conference, 04–05 December 2025.
+- [FHIR SDC Conference (25 June 2025)](https://www.youtube.com/playlist?list=PLEOOqZS1NtwbhWQAT7JjJ_aNzbM5tKxwV) — FHIR SDC Conference recordings.
+- [FHIR Meetups](https://www.youtube.com/playlist?list=PLEOOqZS1NtwYtdDRNjrO6XfRp9JiUxFPH) — FHIR community meetups and talks.
+- [SQL on FHIR](https://www.youtube.com/playlist?list=PLEOOqZS1Ntwa7HnP3PgTLT7zPDJydsdx1) — SQL on FHIR technical content and demos.
+- [FHIR Access Control Meetup 2024](https://www.youtube.com/playlist?list=PLEOOqZS1NtwalGOditsQzRxwlw53aPwZE) — Health Samurai / HealthDevHub meetup on access control, data segmentation, and authorization.
+
+## Products
+
+- [Aidbox — FHIR Server & Database](https://www.health-samurai.io/aidbox.md): Enterprise FHIR server powered by PostgreSQL. Full FHIR R4/R5 compliance, SQL on FHIR, SMART on FHIR, Subscriptions, Bulk Data, and Terminology Services.
+- [Aidbox Forms / Formbox](https://www.health-samurai.io/medical-form.md): FHIR SDC-compliant digital healthcare form builder. Design, manage, and run forms with built-in FHIR data capture.
+- [Termbox — FHIR Terminologies](https://www.health-samurai.io/termbox.md): Production-grade SaaS for FHIR terminology management. SNOMED CT, LOINC, RxNorm, ICD-10, and more.
+- [MDMbox — Master Patient Index & MDM](https://www.health-samurai.io/mdmbox.md): FHIR-native Master Patient Index (eMPI) and Master Data Management software for healthcare. Deduplicates patient records and creates a single source of truth across EHRs, LIS, telehealth, and claims systems via probabilistic matching.
+- [Smartbox — ONC-Certified FHIR API Tools](https://www.health-samurai.io/smartbox.md): ONC-certified API tools for EHR compliance and certification. SMART on FHIR app launcher and authorization platform.
+- [eRxbox — E-Prescription](https://www.health-samurai.io/erxbox.md): FHIR-native e-prescription module with prescription network integration.
+- [Payerbox — CMS-0057-F Compliance](https://www.health-samurai.io/cms-0057-f.md): Turnkey CMS-0057-F compliance platform for health plans. Prior Authorization, Patient Access, Provider Access, and Payer-to-Payer APIs.
+- [Payerbox Prior Authorization](https://www.health-samurai.io/prior-auth.md): FHIR-native PA channel for delegated entities serving MA, MMC, QHP, and CHIP programs.
+- [RCMbox — Revenue Cycle Management](https://www.health-samurai.io/rcmbox.md): Headless RCM backend for healthcare billing teams scaling claims, ERA, and billing workflows across states and payers.
+- [Interbox — Integration Engine](https://www.health-samurai.io/interbox.md): Durable, queue-driven integration runtime. HL7v2 modernization and custom pipelines delivering FHIR to Aidbox.
+- [Healthcare Data Platform Toolkit](https://www.health-samurai.io/healthcare-data-platform-toolkit-aidbox): Aggregate, store, manage, and analyze FHIR data in a secure, compliant, and performant way.
+- [EHR Development Toolkit](https://www.health-samurai.io/ehr-toolkit): Develop custom EHRs or enrich existing ones with pluggable modules — Form Builder, MPI, and standardized FHIR API.
+- [C-CDA / FHIR Converter](https://www.health-samurai.io/c-cda-to-fhir-converter): Bidirectional conversion between C-CDA and FHIR formats.
+
+## Solutions
+
+- [For Digital Health Startups](https://www.health-samurai.io/startups): Speed up development and reduce time to market for digital health startups.
+- [For Payers](https://www.health-samurai.io/payers): Comply with CMS Interoperability and Patient Access rule in 3-6 months.
+- [Telemedicine Platform](https://www.health-samurai.io/telemedicine): Build custom telehealth solutions on FHIR.
+- [Professional Services](https://www.health-samurai.io/services): FHIR-first software development with dedicated teams and domain expertise.
+
+## Documentation
+
+- [Aidbox Documentation](https://www.health-samurai.io/docs/aidbox): Complete Aidbox reference, guides, and API documentation.
+- [Documentation llms.txt](https://www.health-samurai.io/docs/llms.txt): LLM-friendly index of all documentation.
+
+## Pricing
+
+- [Aidbox Pricing](https://www.health-samurai.io/price.md): Development (free), Production ($1,900/mo flat), Enterprise (custom).
+
+## Company
+
+- [About Health Samurai](https://www.health-samurai.io/company.md): Building FHIR-native healthcare infrastructure since 2014.
+- [Contact Us](https://www.health-samurai.io/contacts.md): Get in touch — hello@health-samurai.io
+- [Open Source](https://www.health-samurai.io/opensource): Health Samurai open source products and projects.
+- [Careers](https://www.health-samurai.io/careers): Join the team building the future of healthcare interoperability.
+
+## Case Studies
+
+> 8 real-world stories of healthcare companies building on Aidbox.
+
+- [BodyLogicMD: Extending FHIR: How BodyLogicMD implemented FHIR across its multi-clinic healthcare network](https://www.health-samurai.io/case-study/bodylogicmd-implements-fhir-across-its-multi-clinic-healthcare-network-with-aidbox-fhir-server) (FHIR, Case Study)
+- [Keebler Health: Keebler Health: AI Risk Adjustment on Aidbox FHIR](https://www.health-samurai.io/case-study/how-keebler-health-used-aidbox-to-build-an-ai-native-risk-adjustment-platform) (FHIR, Case Study)
+- [4medica: 4medica modernizes clinical data infrastructure with Aidbox, powering next-generation healthcare solutions](https://www.health-samurai.io/case-study/4medica-modernizes-clinical-data-infrastructure-with-aidbox) (FHIR, Case Study)
+- [Deep 6 AI: Migrating to Aidbox: How Deep 6 AI enhanced performance of its AI pipeline for clinical trial recruitment](https://www.health-samurai.io/case-study/how-deep-6-ai-enhanced-ai-pipeline-performance-for-clinical-trial-recruitment-with-aidbox) (FHIR, Case Study)
+- [Narus Health: Narus Health: Care Management on Aidbox FHIR](https://www.health-samurai.io/case-study/narushealth) (FHIR, Case Study)
+- [Cleo EHR: How we built modern EHR for dermatology clinics](https://www.health-samurai.io/case-study/cleoehr) (FHIR, Case Study)
+- [Prenosis: Prenosis Immunix™: First FDA-Authorized AI Sepsis Diagnostic on FHIR](https://www.health-samurai.io/case-study/prenosis-develops-immunix-for-precision-medicine-with-aidbox) (FHIR, Case Study)
+- [MedClient EHR: Building an Inpatient EHR for a mid-size Hospital](https://www.health-samurai.io/case-study/medclient) (FHIR, Case Study)
+
+## Blog
+
+> 178 articles about FHIR, healthcare interoperability, and Health Samurai products.
+
+- [All Articles](https://www.health-samurai.io/blog.md): Full article index
+- [RSS Feed](https://www.health-samurai.io/blog/rss.xml)
+
+### Recent Articles
+
+- [FHIR in Germany: Navigating ISiK, MII, and EHDS](https://www.health-samurai.io/articles/fhir-adoption-in-germany.md) (2026-07-21): A joint Health Samurai and Gefyra guide to the German FHIR landscape: institutions, laws, profile families, sector obligations, and what the EHDS changes for implementers.
+- [Calculating CMS Quality Measures as SQL on FHIR — No CQL Engine Required](https://www.health-samurai.io/articles/cms-quality-measures-as-sql-on-fhir.md) (2026-07-20): Run CMS/HEDIS eCQMs as SQL on FHIR — no CQL engine. ViewDefinitions and SQLQuery Libraries pack into one FHIR package you can move to any SQL-on-FHIR server, making measure calculation portable and standard.
+- [Reducing Complexity in Patient Intake Forms with FHIR SDC](https://www.health-samurai.io/articles/reducing-complexity-patient-intake-forms-fhir-sdc.md) (2026-07-16): How conditional logic, carefully selected required fields, collapsible sections, response amendments, and data extraction turn large patient intake forms into clear clinical workflows.
+- [FHIR needs data quality profiles](https://www.health-samurai.io/articles/fhir-data-quality-sql-on-fhir.md) (2026-07-15): A green validator tells you nothing about whether a dataset is usable. OMOP solved this a decade ago with the Data Quality Dashboard. FHIR now has every piece needed to build its own — on SQLQuery plus a few extensions.
+- [$batch-validate: Validate Every Stored Resource Against Its Profiles, at Scale](https://www.health-samurai.io/articles/batch-validate-existing-data.md) (2026-07-13): Aidbox 2607 replaces the old batch-validation API with the $batch-validate operation — validate a whole resource type already in your database, sync or async, and drill into exactly which resources are non-compliant and why.
+- [Building FHIR Provider Directory for Medicare Plan Finder](https://www.health-samurai.io/articles/cms-provider-directory-fhir-pipeline.md) (2026-07-06): CMS requires Medicare Advantage plans to publish a PDex Plan-Net FHIR provider directory. With bulk $export and _typeFilter, getting the right data out takes one call, and the rest is ordinary code.
+- [Aidbox, Formbox & Payerbox 2606: Analytics, Bulk Export, and API Control](https://www.health-samurai.io/articles/2606-release.md) (2026-07-06): Release 2606 adds SQLView to the Analytics UI, chart visualization, _elements for bulk export, per-resource API configuration, newer Da Vinci prior auth versions, and Formbox reliability fixes.
+- [@atomic-ehr/codegen: US Core Profiles in Python](https://www.health-samurai.io/articles/atomic-ehr-codegen-python-us-core-profiles.md) (2026-07-03): Generate typed US Core profile classes in Python from the FHIR IG with @atomic-ehr/codegen — typed factories, extensions, slices, and profile-aware validation.
+- [Atomic Workspace: An Agentic AI Platform for FHIR-Native Clinical App Development in a Digital Twin Environment](https://www.health-samurai.io/articles/atomic-workspace-agentic-fhir-platform.md) (2026-06-29): A white paper on Atomic Workspace — an AI platform where clinicians, developers and agents build FHIR-native healthcare apps together inside a digital twin of the production environment.
+- [Performance at Scale: Baseline](https://www.health-samurai.io/articles/performance-at-scale-baseline.md) (2026-06-29): A baseline note for our performance at scale series: what we measure first, why the starting point matters, and how we keep the benchmark honest.
+- [Da Vinci PAS Metrics with SQL on FHIR in Aidbox](https://www.health-samurai.io/articles/pas-metrics-with-sql-on-fhir.md) (2026-06-16): Computing the Da Vinci PAS operational metrics with SQL on FHIR in Aidbox.
+- [How to Export FHIR Data to Databricks Delta Lake](https://www.health-samurai.io/articles/how-to-export-fhir-data-to-databricks-delta-lake.md) (2026-06-15): Export SQL-on-FHIR ViewDefinitions into Databricks Unity Catalog managed Delta tables using continuous delivery or one-shot exports.
+- [SQL on FHIR: Interoperable Analytics](https://www.health-samurai.io/articles/sql-on-fhir-interoperable-analytics.md) (2026-06-11): How SQL on FHIR makes healthcare analytics interoperable: ViewDefinition, the new SQLQuery and SQLView profiles, the run/export/materialize API, and a dbt-style ELT pipeline for FHIR to OMOP.
+- [Aidbox, Formbox & Payerbox 2605: More Control Over Export, Search, and Database Ops](https://www.health-samurai.io/articles/2605-release.md) (2026-06-03): Aidbox, Formbox, and Payerbox 2605 add consent-aware bulk export, SQL on FHIR operations, search usage stats, a database UI page, and payer-facing workflow updates.
+- [Terminology is fun: CodeableConcept.coding[]](https://www.health-samurai.io/articles/terminology-is-fun-codeableconcept-codings.md) (2026-05-28): CodeableConcept through the producer/consumer lens: why one field holds multiple codes, what the producer must capture while they still can, and how the consumer should interpret the array — membership, subsumption, projection — without .first() biting them.
+- [Atom feed syndication in Termbox](https://www.health-samurai.io/articles/termbox-atom-feed-syndication.md) (2026-05-27): Termbox's new support for Atom Feed syndication; what it solves, how it works, and the specific features we've built around it
+- [Building Healthcare Forms Once — Reusing Them Across Organizations](https://www.health-samurai.io/articles/building-healthcare-forms-once-reusing-them-across-organizations.md) (2026-05-27): Centralized form authoring with tenant-specific data isolation: how Formbox's system-shared resources let healthcare SaaS platforms reuse Questionnaires across organizations without duplicating forms.
+- [Designing $unmerge: Reversing the FHIR Patient Merge](https://www.health-samurai.io/articles/designing-unmerge-fhir-patient.md) (2026-05-22): FHIR has no $unmerge operation. We built one that reverses a merge using Provenance + History API and lets the client decide what to do with data added between the merge and unmerge.
+- [Designing Multilingual Forms for Global Healthcare: One Form in Many Languages](https://www.health-samurai.io/articles/multilingual-forms-global-healthcare.md) (2026-05-21): Instead of duplicating a form for every language, define it once and extend it with translations and terminology bindings — one structured form that renders in many languages.
+- [Configuring and Tuning a Patient Matching Model: A Practical Guide](https://www.health-samurai.io/articles/configuring-tuning-patient-matching-model.md) (2026-05-14): How to configure and fine-tune a patient matching model in MDMbox — from defining match criteria and model structure to blocking, training, and manual tuning.
+
+## News
+
+> 88 news updates from Health Samurai.
+
+- [Health Samurai Tests Payerbox at the CMS HL7 FHIR Connectathon](https://www.health-samurai.io/news/health-samurai-tests-payerbox-at-cms-hl7-fhir-connectathon-2026) (2026-07-15)
+- [Health Samurai brings the Aidbox FHIR server to Databricks](https://www.health-samurai.io/news/aidbox-fhir-server-on-databricks) (2026-06-29)
+- [KONZA Health and Health Samurai partner on C-CDA-to-FHIR conversion for digital HEDIS and CMS-0057-F](https://www.health-samurai.io/news/konza-health-and-health-samurai-partner-on-c-cda-to-fhir-conversion) (2026-06-23)
+- [Health Samurai launches RCMbox, a self-hosted billing backend for healthcare product teams](https://www.health-samurai.io/news/health-samurai-launches-rcmbox-self-hosted-billing-backend) (2026-05-06)
+- [Health Samurai Becomes an Organizational Member of HL7](https://www.health-samurai.io/news/health-samurai-becomes-organizational-member-of-hl7) (2026-04-28)
+- [Health Samurai at Emids Healthcare Summit 2026: CEO Pavel Smirnov to co-moderate roundtable on interoperability](https://www.health-samurai.io/news/health-samurai-at-emids-healthcare-summit-2026) (2026-04-06)
+- [HealthLX and Health Samurai partner to accelerate FHIR-based Prior Authorization and interoperability infrastructure](https://www.health-samurai.io/news/healthlx-and-health-samurai-partner-to-accelerate-fhir-based-prior-authorization-and-interoperability-infrastructure) (2026-04-01)
+- [Health Samurai launches Formbox to replace paper, PDFs, and fragmented form workflows in healthcare](https://www.health-samurai.io/news/health-samurai-launches-formbox-to-replace-paper-pdfs-and-fragmented-form-workflows-in-healthcare) (2026-03-02)
+- [Washington State Department of Health Partners with Health Samurai to Power Statewide Public Health Reporting with Aidbox](https://www.health-samurai.io/news/washington-state-department-of-health-partners-with-health-samurai-to-power-statewide-public-health-reporting-with-aidbox) (2026-01-26)
+- [VillageCareMAX ranks #2 in Flexpa's 2025 Payer Patient Access API Report](https://www.health-samurai.io/news/villagecaremax-ranks-2-in-flexpa-2025-payer-patient-access-api-report) (2026-01-15)
+
+## Webinars & Events
+
+> 186 talks across 10 event series.
+
+- [SQL on FHIR WG Meetings](https://www.health-samurai.io/events/sql-on-fhir): Weekly meetings of the HL7 SQL on FHIR working group — spec discussions, implementer demos, and open design questions. Recordings are public; no registration needed.
+  - [SQL on FHIR WG Meeting — July 14, 2026](https://www.health-samurai.io/events/sql-on-fhir/2026-07-14-meeting)
+  - [SQL on FHIR WG Meeting — July 7, 2026](https://www.health-samurai.io/events/sql-on-fhir/2026-07-07-meeting)
+  - [SQL on FHIR WG Meeting — June 23, 2026](https://www.health-samurai.io/events/sql-on-fhir/2026-06-23-meeting)
+  - [SQL on FHIR WG Meeting — June 9, 2026](https://www.health-samurai.io/events/sql-on-fhir/2026-06-09-meeting)
+  - [SQL on FHIR WG Meeting — June 2, 2026](https://www.health-samurai.io/events/sql-on-fhir/2026-06-02-meeting)
+  - ... and 115 more talks
+- [SDC Conference 2025](https://www.health-samurai.io/events/sdc-conference-2025): A virtual conference dedicated to FHIR Structured Data Capture (SDC) - standards for creating complex healthcare forms with adaptive behavior, auto-population, and clinical workflows.
+  - [Introduction to FHIR SDC](https://www.health-samurai.io/events/sdc-conference-2025/01-introduction-to-fhir-sdc)
+  - [Managing resource lifecycle with SDC](https://www.health-samurai.io/events/sdc-conference-2025/02-managing-resource-lifecycle-with-sdc)
+  - [Template-Based Extraction and Beyond](https://www.health-samurai.io/events/sdc-conference-2025/03-template-based-extraction-and-beyond)
+  - [Designing Intuitive UIs for Template-Based Extraction](https://www.health-samurai.io/events/sdc-conference-2025/04-designing-intuitive-uis-for-template-based-extraction)
+  - [Using CQL with the SDC $populate operation](https://www.health-samurai.io/events/sdc-conference-2025/05-using-cql-with-sdc-populate-operation)
+  - ... and 4 more talks
+- [Agents on FHIR](https://www.health-samurai.io/events/agents-on-fhir): Weekly community calls on building AI agents on top of FHIR — demos, design arguments, and what breaks in practice. Recordings are public; no registration needed.
+  - [Agents on FHIR — July 23, 2026](https://www.health-samurai.io/events/agents-on-fhir/2026-07-23-meeting)
+  - [Agents on FHIR — July 16, 2026](https://www.health-samurai.io/events/agents-on-fhir/2026-07-16-meeting)
+  - [Agents on FHIR — July 9, 2026](https://www.health-samurai.io/events/agents-on-fhir/2026-07-09-meeting)
+  - [Agents on FHIR — June 11, 2026](https://www.health-samurai.io/events/agents-on-fhir/2026-06-11-meeting)
+  - [Agents on FHIR — May 28, 2026](https://www.health-samurai.io/events/agents-on-fhir/2026-05-28-meeting)
+  - ... and 13 more talks
+- [FHIR Analytics 2025](https://www.health-samurai.io/events/fhir-analytics-2025): Conference about SQL on FHIR, analytics tools, and transforming FHIR data for population-level queries.
+  - [CQL to SQL Conversion Exploration](https://www.health-samurai.io/events/fhir-analytics-2025/03-cql-to-sql-conversion)
+  - [Using SQL on FHIR in the HL7 FHIR IG Publisher](https://www.health-samurai.io/events/fhir-analytics-2025/04-sql-on-fhir-ig-publisher)
+  - [Natural Language Queries to SQL-on-FHIR](https://www.health-samurai.io/events/fhir-analytics-2025/05-natural-language-queries)
+  - [Bridging Forms and Analytics: AI-Assisted FHIR Questionnaire and ViewDefinition Authoring](https://www.health-samurai.io/events/fhir-analytics-2025/06-bridging-forms-and-analytics)
+  - [FlatQuack: FHIR Resources to SQL Tables with DuckDB](https://www.health-samurai.io/events/fhir-analytics-2025/07-flatquack-duckdb)
+  - ... and 6 more talks
+- [FHIR Analytics 2024](https://www.health-samurai.io/events/fhir-analytics-2024): A conference about SQL on FHIR, analytics tools, and transforming FHIR data for population-level queries.
+  - [Transforming FHIR for efficient population queries using Open Health Stack](https://www.health-samurai.io/events/fhir-analytics-2024/02-open-health-stack)
+  - [Safhire: Rust-y Ducklings in a Row](https://www.health-samurai.io/events/fhir-analytics-2024/03-safhire-rust-ducklings)
+  - [An Open Approach for Translating FHIR to OMOP](https://www.health-samurai.io/events/fhir-analytics-2024/04-fhir-to-omop)
+  - [Pathling: SQL on FHIR views for Apache Spark](https://www.health-samurai.io/events/fhir-analytics-2024/05-pathling-spark)
+  - [FlatQuack: FHIR resources to SQL tables with DuckDB](https://www.health-samurai.io/events/fhir-analytics-2024/06-flatquack-duckdb)
+  - ... and 5 more talks
+- [FHIR Meetup](https://www.health-samurai.io/events/fhir-meetups): Regular community meetups covering FHIR topics including security, profiling, terminology, scaling, and more.
+  - [FHIR Access Control: Real-world Challenges and Solutions](https://www.health-samurai.io/events/fhir-meetups/12-fhir-access-control)
+  - [FHIR Topic-based Subscriptions](https://www.health-samurai.io/events/fhir-meetups/11-fhir-topic-based-subscriptions)
+  - [SMART on FHIR](https://www.health-samurai.io/events/fhir-meetups/10-smart-on-fhir)
+  - [Federated FHIR: Patient Identity & Record Linkage](https://www.health-samurai.io/events/fhir-meetups/09-federated-fhir-patient-identity)
+  - [FHIR at Scale](https://www.health-samurai.io/events/fhir-meetups/08-fhir-at-scale)
+  - ... and 7 more talks
+- [Recorded webinars](https://www.health-samurai.io/events/recorded)
+  - [What's new in Aidbox — a better way to work with FHIR](https://www.health-samurai.io/events/recorded/whats-new-in-aidbox-a-better-way-to-work-with-fhir)
+  - [Aidbox Product Updates | September 2023](https://www.health-samurai.io/events/recorded/02-aidbox-updates-september-2023)
+  - [Aidbox Product Updates | August 2023](https://www.health-samurai.io/events/recorded/03-aidbox-updates-august-2023)
+- [HL7 FHIR® Camp 2025, Portugal](https://www.health-samurai.io/events/fhir-camp-2025): HL7 FHIR® Camp 2025 reimagines the traditional conference experience.
+  - [HL7 FHIR® Camp 2025, Portugal](https://www.health-samurai.io/events/fhir-camp-2025/event)
+- [FHIR® Camp 2024, Portugal](https://www.health-samurai.io/events/fhir-camp-2024): FHIR® Camp 2024 is an anti-conference inspired by the early FHIR DevDays.
+  - [FHIR® Camp 2024, Portugal](https://www.health-samurai.io/events/fhir-camp-2024/event)
+- [FHIR Camp 2023, Portugal](https://www.health-samurai.io/events/fhir-camp-in-cascais-portugal): The first-ever offline FHIR Camp in Cascais, Portugal.
+  - [FHIR Camp 2023, Portugal](https://www.health-samurai.io/events/fhir-camp-in-cascais-portugal/event)
+
+## Downloads
+
+- [Complete Guide to Patient Matching Models](https://www.health-samurai.io/downloads/fine-tuning-patient-matching-model): This guide shows how to configure and tune a probabilistic matching model for MDMbox on your own: from the first definition of what a “correct match” ...
+- [Aidbox Brochure](https://www.health-samurai.io/downloads/aidbox-brochure): Explore Aidbox in 5 minutes. Download this brochure to get a quick overview about the Aidbox FHIR Platform applications, special discounts, profession...
+- [SDC (Structured Data Capture) Guide](https://www.health-samurai.io/downloads/sdc-guide): In this guide, you will explore how SDC extends the FHIR Questionnaire to build dynamic forms featuring conditional logic, automatic pre-population, a...
+- [Aidbox FHIR Platform Performance Report](https://www.health-samurai.io/downloads/aidbox-performance-report): In this report, you’ll learn typical scenarios involving data import, search, and export and explore Aidbox’s key strengths in terms of performance, r...
+- [EHR Development Toolkit Brochure](https://www.health-samurai.io/downloads/ehr-development-toolkit-brochure): Download our EHR brochure and discover how Aidbox can save you up to 70% of your time when kickstarting your EHR development.
+- [Aidbox for Startups Toolkit Brochure](https://www.health-samurai.io/downloads/aidbox-for-startups-toolkit-brochure): Aidbox helps digital health startups speed up development and reduce time to market. Simply delegate technical tasks to the Aidbox FHIR platform and f...
+- [Healthcare Data Platform Toolkit Brochure](https://www.health-samurai.io/downloads/healthcare-data-platform-toolkit-brochure): Future-proof your healthcare solution and move to FHIR with confidence. Get a single space for your team to aggregate, store, manage, and analyze FHIR...
+- [Aidbox + Cloudticity Solution Brief](https://www.health-samurai.io/downloads/aidbox-cloudticity-solution-brief): With Aidbox and Cloudticity, you can delegate infrastructure management tasks — from security, integration, management, and sharing, to cloud infrastr...
+- [Standardized HL7 FHIR API for EHRs Cheatsheet](https://www.health-samurai.io/downloads/standardized-hl7-fhir-api-for-ehrs-cheatsheet): This cheatsheet is designed for the US EHR vendors who need to build a read-only HL7 FHIR® API for patient and population services and comply with §17...

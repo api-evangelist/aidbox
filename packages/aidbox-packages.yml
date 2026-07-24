@@ -1,0 +1,66 @@
+generated: '2026-07-24'
+method: searched
+source: npm, PyPI, and the Aidbox GitHub organization (https://github.com/Aidbox)
+note: >-
+  First-party Aidbox client SDKs and code-generation tooling from Health Samurai.
+  Language coverage spans JavaScript/TypeScript, Python, .NET, and Clojure, plus a
+  polyglot SDK generator that emits typed clients from a box's FHIR profiles.
+packages:
+- language: javascript
+  registry: npm
+  name: "@aidbox/client-sdk-js"
+  url: https://www.npmjs.com/package/@aidbox/client-sdk-js
+  install: npm install @aidbox/client-sdk-js
+  official: true
+  description: Aidbox client SDK for JavaScript/TypeScript browser and Node clients.
+- language: javascript
+  registry: npm
+  name: "@aidbox/node-server-sdk"
+  url: https://www.npmjs.com/package/@aidbox/node-server-sdk
+  install: npm install @aidbox/node-server-sdk
+  official: true
+  description: Node.js server SDK for building Aidbox apps and subscription handlers.
+- language: python
+  registry: pypi
+  name: aidbox-python-sdk
+  url: https://pypi.org/project/aidbox-python-sdk/
+  install: pip install aidbox-python-sdk
+  official: true
+  description: Python SDK for building Aidbox apps (aiohttp-based) against the Aidbox API.
+- language: python
+  registry: github
+  name: aidbox-python
+  url: https://github.com/Aidbox/aidbox-python
+  install: pip install git+https://github.com/Aidbox/aidbox-python
+  official: true
+  description: Pythonic FHIR/Aidbox resource client (Patient CRUD, search, operations).
+- language: typescript
+  registry: github
+  name: aidbox-sdk-js
+  url: https://github.com/Aidbox/aidbox-sdk-js
+  install: see repository
+  official: true
+  description: Typed Aidbox JavaScript/TypeScript SDK generated from a box's FHIR types.
+- language: dotnet
+  registry: github
+  name: fhirsharp
+  url: https://github.com/Aidbox/fhirsharp
+  install: see repository
+  official: true
+  description: .NET / C# FHIR client tooling for Aidbox.
+- language: clojure
+  registry: github
+  name: aidbox-clojure-sdk
+  url: https://github.com/Aidbox/aidbox-clojure-sdk
+  install: see repository
+  official: true
+  description: Clojure SDK for Aidbox app development.
+- language: polyglot
+  registry: github
+  name: aidbox-sdk
+  url: https://github.com/Aidbox/aidbox-sdk
+  install: "aidbox-sdk generate <target-language> <input-source> --auth-token <token>"
+  official: true
+  description: >-
+    Aidbox SDK Generator - emits typed client SDKs in multiple target languages from a
+    box's FHIRSchema/profiles (distributed as a precompiled binary or a runnable JAR).

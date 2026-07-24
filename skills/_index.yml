@@ -1,0 +1,22 @@
+generated: '2026-07-24'
+method: generated
+source: >-
+  Grounded in Aidbox MCP tools (mcp/aidbox-mcp.yml), the FHIR RESTful interactions in
+  fhir/aidbox-capabilitystatement.json, and conventions/aidbox-conventions.yml.
+skills:
+- file: aidbox-create-and-read-patient.md
+  name: Create and read a FHIR Patient
+  api: fhir/aidbox-capabilitystatement.json
+  operations: [create-fhir-resource, read-fhir-resource]
+- file: aidbox-search-fhir.md
+  name: Search FHIR resources
+  api: fhir/aidbox-capabilitystatement.json
+  operations: [search-fhir-resources]
+- file: aidbox-conditional-upsert.md
+  name: Idempotent conditional upsert
+  api: fhir/aidbox-capabilitystatement.json
+  operations: [conditional-update-fhir-resource, validate-fhir-resource]
+- file: aidbox-bulk-export.md
+  name: Bulk-export FHIR data
+  api: fhir/aidbox-capabilitystatement.json
+  operations: [start-patient-level-export]

@@ -1,0 +1,94 @@
+generated: '2026-07-24'
+method: derived
+source: >-
+  mcp/aidbox-mcp.yml tools bound to the FHIR RESTful interaction model advertised in
+  fhir/aidbox-capabilitystatement.json (Aidbox exposes no OpenAPI; its machine-readable
+  contract is the FHIR CapabilityStatement, so tools are bound to FHIR interaction codes
+  rather than OpenAPI operationIds).
+surfaces:
+  openapi: null
+  fhir_rest:
+    capability_statement: fhir/aidbox-capabilitystatement.json
+    base: https://sandbox.aidbox.app/fhir
+    note: FHIR R4/R5/R6 REST; 138 resource types in the sandbox CapabilityStatement.
+  graphql:
+    endpoint: https://sandbox.aidbox.app/$graphql
+    introspection: gated
+    note: Introspection returns 401 "Login Required"; schema requires an authenticated client.
+  mcp:
+    endpoint: "<aidbox-base-url>/mcp"
+    tools_list: gated-on-sandbox
+    note: sandbox.aidbox.app does not expose /mcp anonymously (404); tools captured from docs.
+crosswalk:
+- tool: read-fhir-resource
+  category: fhir-crud
+  fhir: [read]
+  binding: fhir-rest
+  confidence: high
+  note: GET [base]/{Type}/{id}
+- tool: create-fhir-resource
+  category: fhir-crud
+  fhir: [create]
+  binding: fhir-rest
+  confidence: high
+  note: POST [base]/{Type}
+- tool: update-fhir-resource
+  category: fhir-crud
+  fhir: [update]
+  binding: fhir-rest
+  confidence: high
+  note: PUT [base]/{Type}/{id}
+- tool: conditional-update-fhir-resource
+  category: fhir-crud
+  fhir: [update]
+  binding: fhir-rest
+  confidence: high
+  note: PUT [base]/{Type}?<search> (conditional update; idempotent upsert)
+- tool: conditional-patch-fhir-resource
+  category: fhir-crud
+  fhir: [patch]
+  binding: fhir-rest
+  confidence: high
+  note: PATCH [base]/{Type}?<search>
+- tool: patch-fhir-resource
+  category: fhir-crud
+  fhir: [patch]
+  binding: fhir-rest
+  confidence: high
+  note: PATCH [base]/{Type}/{id}
+- tool: delete-fhir-resource
+  category: fhir-crud
+  fhir: [delete]
+  binding: fhir-rest
+  confidence: high
+  note: DELETE [base]/{Type}/{id}
+- tool: search-fhir-resources
+  category: fhir-search
+  fhir: [search-type]
+  binding: fhir-rest
+  confidence: high
+  note: GET [base]/{Type}?<params>
+- tool: validate-fhir-resource
+  category: fhir-operation
+  fhir: ["$validate"]
+  binding: fhir-rest
+  confidence: high
+  note: POST [base]/{Type}/$validate (FHIR validation operation)
+mcp_only: []
+rest_only:
+- capability: transaction/batch bundles
+  fhir: [transaction, batch]
+  note: POST [base] with a Bundle; no dedicated MCP tool.
+- capability: FHIR operations
+  detail: 459 named operations in the CapabilityStatement ($everything, $export, $lastn, $document, terminology $lookup/$validate-code/$expand, etc.) with no MCP tool.
+- capability: GraphQL query surface
+  detail: $graphql endpoint; separate projection, not exposed as an MCP tool.
+- capability: Bulk Data export/import
+  detail: $export / fhir-bulk-load; no MCP tool.
+coverage:
+  tools_named: 9
+  tools_bound: 9
+  mcp_only: 0
+  fhir_interactions_covered: [read, create, update, patch, delete, search-type, "$validate"]
+  rest_ops_total: 459
+  note: MCP covers single-resource CRUD + search + validate; bulk/transaction/GraphQL/operations remain REST/GraphQL-only.

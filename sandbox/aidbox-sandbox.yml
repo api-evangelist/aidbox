@@ -1,0 +1,32 @@
+generated: '2026-07-24'
+method: searched
+source: https://sandbox.aidbox.app, https://www.health-samurai.io/docs/aidbox/getting-started
+note: >-
+  Aidbox provides a live public reference deployment plus a free self-hosted Development
+  edition. Values below are published/observed; no secrets are invented.
+public_sandbox:
+  base_url: https://sandbox.aidbox.app
+  fhir_base: https://sandbox.aidbox.app/fhir
+  fhir_version: 4.0.1 (R4)
+  metadata: https://sandbox.aidbox.app/fhir/metadata
+  smart_configuration: https://sandbox.aidbox.app/.well-known/smart-configuration
+  openid_configuration: https://sandbox.aidbox.app/.well-known/openid-configuration
+  oauth_authorization_server: https://sandbox.aidbox.app/.well-known/oauth-authorization-server
+  auth_endpoints:
+    authorize: https://sandbox.aidbox.app/auth/authorize
+    token: https://sandbox.aidbox.app/auth/token
+    introspect: https://sandbox.aidbox.app/auth/introspect
+    userinfo: https://sandbox.aidbox.app/auth/userinfo
+  read_access: >-
+    The CapabilityStatement (/fhir/metadata) and .well-known discovery documents are public;
+    resource CRUD and $graphql require authentication (observed: $graphql returns 401 Login Required).
+local_dev:
+  edition: Development (free)
+  run: docker compose (aidbox-docker-compose) or Aidbox UI; also devbox for local runs.
+  docs: https://www.health-samurai.io/docs/aidbox/getting-started/run-aidbox-locally
+test_vs_production:
+  development: Free tier, non-production, full feature access for building/testing.
+  production: Flat-rate production edition ($1,900/mo); Enterprise custom.
+project_templates:
+  note: Aidbox ships runnable seed projects (aidbox-project-template, samples, terminology loaders) to bootstrap a test box.
+  repos: [aidbox-project-template, aidbox-project-samples, aidbox-docker-compose, devbox]

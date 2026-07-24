@@ -1,0 +1,52 @@
+generated: '2026-07-24'
+method: derived
+source: fhir/aidbox-capabilitystatement.json (rest[0].resource types) + HL7 FHIR R4 reference model
+note: >-
+  Aidbox's data model IS the HL7 FHIR R4 resource model. The sandbox CapabilityStatement
+  advertises 138 resource types; entities relate through typed FHIR Reference elements
+  (Reference(ResourceType)). Below is the marquee clinical/administrative subgraph derived
+  from the standard FHIR reference model - not an exhaustive 138-node listing.
+resource_count: 138
+identity:
+  scheme: FHIR logical id (Resource.id) - server-assigned or client-supplied; versioned via meta.versionId.
+  reference_form: "Reference: {resourceType}/{id} (relative) or absolute URL"
+entities:
+- entity: Patient
+  relationships:
+  - {to: Organization, kind: belongs_to, via: managingOrganization}
+  - {to: Practitioner, kind: has_many, via: generalPractitioner}
+- entity: Encounter
+  relationships:
+  - {to: Patient, kind: belongs_to, via: subject}
+  - {to: Practitioner, kind: has_many, via: participant.individual}
+  - {to: Organization, kind: belongs_to, via: serviceProvider}
+- entity: Observation
+  relationships:
+  - {to: Patient, kind: belongs_to, via: subject}
+  - {to: Encounter, kind: belongs_to, via: encounter}
+- entity: Condition
+  relationships:
+  - {to: Patient, kind: belongs_to, via: subject}
+  - {to: Encounter, kind: belongs_to, via: encounter}
+- entity: MedicationRequest
+  relationships:
+  - {to: Patient, kind: belongs_to, via: subject}
+  - {to: Medication, kind: has_one, via: medicationReference}
+  - {to: Practitioner, kind: has_one, via: requester}
+- entity: DiagnosticReport
+  relationships:
+  - {to: Patient, kind: belongs_to, via: subject}
+  - {to: Observation, kind: has_many, via: result}
+- entity: Claim
+  relationships:
+  - {to: Patient, kind: belongs_to, via: patient}
+  - {to: Coverage, kind: has_many, via: insurance.coverage}
+- entity: Coverage
+  relationships:
+  - {to: Patient, kind: belongs_to, via: beneficiary}
+  - {to: Organization, kind: has_one, via: payor}
+- entity: AuditEvent
+  relationships:
+  - {to: Patient, kind: has_many, via: agent.who / entity.what}
+render:
+  note: Full entity graph follows HL7 FHIR R4; per-box shape is defined by that box's CapabilityStatement + FHIRSchema profiles.

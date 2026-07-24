@@ -1,0 +1,58 @@
+generated: '2026-07-24'
+method: searched
+source: https://www.health-samurai.io/docs/aidbox/overview/release-notes
+scheme: calver
+scheme_detail: MAJOR.MINOR where MAJOR = YYMM (year+month), MINOR increments from 0
+current_version: '2606'
+docs: https://www.health-samurai.io/docs/aidbox/overview/release-notes
+entries:
+- version: '2606'
+  channel: latest
+  date: '2026-06'
+  additions:
+  - Streamable HTTP MCP transport (direct connections from ChatGPT, Claude, and modern MCP clients).
+  - Resource-level storage and API configuration (enable/disable REST API and history per resource type).
+  - SQLView in Analytics UI; chart visualization of query results in SQL Console and Notebooks.
+  - Bulk export supports _elements; system-level bulk export.
+  breaking:
+  - MPI $match functionality moved to MDMbox.
+  - Legacy validation engines removed.
+- version: '2605'
+  channel: stable
+  lts: true
+  date: '2026-05'
+  additions:
+  - Databricks Delta table support as AidboxTopicDestination.
+  - Consent-aware export with opt-in/opt-out filtering.
+  - Async $viewdefinition-export operation for materializing SQL-on-FHIR views.
+  - System-level $validate endpoint; comprehensive password management and policies.
+- version: '2604'
+  date: '2026-04'
+  additions:
+  - Databricks identity authentication for Lakebase connections.
+  - De-identification in SQL-on-FHIR ViewDefinition (HIPAA Safe Harbor).
+  - Reworked SQL Console; Row-Level Security via BOX_DB_PASS_AUTH_VARS.
+- version: '2603'
+  date: '2026-03'
+  additions:
+  - New open-source Aidbox UI enabled by default.
+  - BigQuery support as AidboxTopicDestination.
+  - Bulk $import and $load operations now generate AuditEvents.
+- version: '2602'
+  date: '2026-02'
+  additions:
+  - External Vault integration for secrets management.
+  - Amazon SNS as AidboxTopicDestination; Patient compartment $purge operation.
+- version: '2601'
+  date: '2026-01'
+  additions:
+  - Enhanced FHIR Topic-based subscriptions; AWS EventBridge as AidboxTopicDestination.
+  - Performance +25% CRUD, +80% bundle imports; GraphQL Federation support.
+- version: '2509'
+  date: '2025-09'
+  additions:
+  - MCP validate-fhir-resource tool added.
+- version: '2505'
+  date: '2025-05'
+  additions:
+  - MCP module launched (alpha).

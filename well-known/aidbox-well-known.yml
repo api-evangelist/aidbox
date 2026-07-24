@@ -1,0 +1,34 @@
+generated: '2026-07-24'
+method: searched
+source: live probes of sandbox.aidbox.app/.well-known/*
+host: https://sandbox.aidbox.app
+note: >-
+  Aidbox is deployed software, not a single multi-tenant endpoint. These documents
+  come from the public reference deployment (sandbox.aidbox.app); every self-hosted or
+  Aidbox-hosted box publishes its own equivalents rooted at its own FHIR base URL.
+documents:
+- path: /.well-known/smart-configuration
+  description: SMART App Launch discovery (SMART-on-FHIR)
+  status: 200
+  file: aidbox-smart-configuration.json
+- path: /.well-known/openid-configuration
+  description: OpenID Connect discovery (RFC 8414 / OIDC Discovery)
+  status: 200
+  file: aidbox-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  description: OAuth 2.0 Authorization Server Metadata (RFC 8414)
+  status: 200
+  file: aidbox-oauth-authorization-server.json
+- path: /.well-known/jwks.json
+  description: JSON Web Key Set for token/id_token signature verification
+  status: 200
+  file: aidbox-jwks.json
+- path: /.well-known/security.txt
+  description: RFC 9116 security contact
+  status: 404
+- path: /.well-known/oauth-protected-resource
+  description: OAuth 2.0 Protected Resource Metadata (RFC 9728)
+  status: 404
+- path: /.well-known/api-catalog
+  description: RFC 9727 API catalog
+  status: 404

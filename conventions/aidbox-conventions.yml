@@ -1,0 +1,53 @@
+generated: '2026-07-24'
+method: searched
+source: >-
+  fhir/aidbox-capabilitystatement.json + HL7 FHIR R4 RESTful conventions as implemented by
+  Aidbox (https://www.health-samurai.io/docs/aidbox/api-1)
+note: >-
+  Aidbox follows HL7 FHIR RESTful conventions (plus Aidbox-native REST/search extensions).
+  The semantics below are the FHIR HTTP contract as implemented by Aidbox.
+authentication:
+  style: OAuth2 / SMART-on-FHIR bearer tokens (also HTTP Basic for Clients)
+  ref: authentication/aidbox-authentication.yml
+idempotency:
+  supported: true
+  mechanisms:
+  - name: PUT update
+    detail: FHIR update via PUT [base]/{Type}/{id} is idempotent by resource identity.
+  - name: conditional-create
+    detail: POST with If-None-Exist header creates only if the search finds no match (idempotent upsert).
+  - name: conditional-update
+    detail: PUT [base]/{Type}?<search> upserts against a search - idempotent by business key.
+  - name: optimistic-locking
+    detail: If-Match with the resource ETag/versionId prevents lost updates (412 on version conflict).
+  headers: [If-None-Exist, If-Match]
+  mcp_tools: [conditional-update-fhir-resource, conditional-patch-fhir-resource]
+pagination:
+  style: FHIR Bundle links
+  params: [_count, _page, _sort, _elements, _total]
+  response: >-
+    searchset Bundle with Bundle.total and Bundle.link entries (self / next / previous)
+    carrying opaque continuation URLs.
+search:
+  style: FHIR search parameters plus Aidbox-native SQL search
+  features: [chained params, _include, _revinclude, _has, modifiers, SQL-on-FHIR ViewDefinition]
+field_selection:
+  param: _elements
+  detail: Limit returned elements; _summary for summary views.
+versioning:
+  api: FHIR version negotiated per box (R4/R5/R6); resource versioning via meta.versionId + ETag.
+  product: CalVer (see lifecycle/aidbox-changelog).
+request_tracing:
+  note: Standard FHIR responses; AuditEvent resources and configurable audit logging (BALP) capture access.
+error_envelope:
+  format: HL7 FHIR OperationOutcome
+  content_type: application/fhir+json
+  detail: Errors return an OperationOutcome resource with issue[].severity/code/diagnostics/details.
+  ref: errors/aidbox-problem-types.yml
+rate_limiting:
+  note: Deployment/edition dependent; not a fixed public quota (Aidbox is self- or vendor-hosted software).
+cross_links:
+  errors: errors/aidbox-problem-types.yml
+  lifecycle: lifecycle/aidbox-lifecycle.yml
+  authentication: authentication/aidbox-authentication.yml
+  scopes: scopes/aidbox-scopes.yml

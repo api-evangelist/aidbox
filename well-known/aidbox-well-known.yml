@@ -1,11 +1,13 @@
-generated: '2026-07-24'
+generated: '2026-08-14'
 method: searched
-source: live probes of sandbox.aidbox.app/.well-known/*
+source: live probes of sandbox.aidbox.app/.well-known/* and www.health-samurai.io/.well-known/*
 host: https://sandbox.aidbox.app
 note: >-
   Aidbox is deployed software, not a single multi-tenant endpoint. These documents
   come from the public reference deployment (sandbox.aidbox.app); every self-hosted or
-  Aidbox-hosted box publishes its own equivalents rooted at its own FHIR base URL.
+  Aidbox-hosted box publishes its own equivalents rooted at its own FHIR base URL. The
+  marketing/docs host (www.health-samurai.io) was also probed and serves none of these
+  paths (all 404), as expected for a docs site rather than an API host.
 documents:
 - path: /.well-known/smart-configuration
   description: SMART App Launch discovery (SMART-on-FHIR)
@@ -31,4 +33,13 @@ documents:
   status: 404
 - path: /.well-known/api-catalog
   description: RFC 9727 API catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  description: ChatGPT plugin manifest
+  status: 404
+- path: /.well-known/agent-card.json
+  description: A2A Agent Card (1.0.0 canonical path)
+  status: 404
+- path: /.well-known/agent.json
+  description: A2A Agent Card (pre-0.3 legacy path)
   status: 404

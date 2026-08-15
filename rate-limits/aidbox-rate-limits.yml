@@ -1,0 +1,30 @@
+generated: '2026-08-14'
+method: searched
+source: >-
+  https://www.health-samurai.io/docs/aidbox (getting-started, overview, and
+  security-and-access-control sections searched for "rate limit"/"throttl"/"quota");
+  live unauthenticated GET https://sandbox.aidbox.app/fhir/metadata probed for
+  RateLimit/Retry-After response headers on 2026-08-14.
+limit_count: 0
+note: >-
+  No published per-key/per-account/per-endpoint request-rate limits found in the
+  Aidbox documentation, and no X-RateLimit-*/RateLimit-*/Retry-After headers were
+  observed on a live unauthenticated response from the public reference deployment.
+  This is expected for self-/vendor-hosted software rather than a shared
+  multi-tenant SaaS API: Aidbox is deployed per-customer (Docker/Kubernetes/AWS/
+  Azure/GCP/on-prem), so throughput is bounded by the deployment's own compute and
+  PostgreSQL sizing, not a platform-wide quota. The company does publish bulk
+  $import throughput as a performance figure (~21k resources/sec, per the
+  provider's own published Agent Skill at
+  skills/aidbox-provider-skill/SKILL.md), which is a capacity claim, not a rate
+  limit.
+observed_response_headers:
+  probe_url: https://sandbox.aidbox.app/fhir/metadata
+  probe_date: '2026-08-14'
+  status: 200
+  rate_limit_headers_present: false
+  headers_seen: [date, content-type, content-length, license-mode, x-duration, x-request-id, x-temp-dur-in-pg, strict-transport-security]
+exhaustion_status_code: unknown
+cross_links:
+  conventions: conventions/aidbox-conventions.yml
+  sandbox: sandbox/aidbox-sandbox.yml

@@ -32,7 +32,7 @@ tags:
 - Terminology
 - Digital Health
 created: '2026-07-24'
-modified: '2026-07-24'
+modified: '2026-08-14'
 specificationVersion: '0.20'
 apis:
 - aid: aidbox:aidbox-fhir-api
@@ -221,6 +221,15 @@ common:
   url: well-known/aidbox-well-known.yml
 - type: LLMsTxt
   url: llms/aidbox-llms.txt
+- type: RateLimits
+  url: rate-limits/aidbox-rate-limits.yml
+- type: Plans
+  url: plans/aidbox-plans-pricing.yml
+x-enrichment:
+  date: '2026-08-14'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

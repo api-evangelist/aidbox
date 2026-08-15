@@ -1,22 +1,51 @@
-generated: '2026-07-24'
-method: generated
-source: >-
-  Grounded in Aidbox MCP tools (mcp/aidbox-mcp.yml), the FHIR RESTful interactions in
-  fhir/aidbox-capabilitystatement.json, and conventions/aidbox-conventions.yml.
+generated: '2026-08-14'
+method: searched
+note: >-
+  Two tiers: provider_published is Health Samurai's own first-party Agent Skill
+  package, saved verbatim (strongest provenance); skills is our own generated set,
+  grounded in real operationIds/tools already present in this repo.
+provider_published:
+- file: aidbox-provider-skill/SKILL.md
+  name: aidbox
+  source: https://github.com/HealthSamurai/aidbox-skill
+  method: searched
+  description: >-
+    Official Health Samurai "Aidbox" Claude Code / agent skill plugin. Frontmatter
+    description: "Use when working with Aidbox FHIR server - setup, data loading,
+    access control, SQL queries, subscriptions, multi-tenancy, or troubleshooting.
+    Knows Aidbox-specific patterns that differ from standard FHIR."
+  install: /plugin marketplace add HealthSamurai/aidbox-skill
+  supporting_files:
+  - aidbox-provider-skill/README.md
+  - aidbox-provider-skill/CLAUDE.md
+  - aidbox-provider-skill/getting-started.md
+  - aidbox-provider-skill/access-policy.md
+  - aidbox-provider-skill/configuration.md
+  - aidbox-provider-skill/sql-api.md
+  - aidbox-provider-skill/bulk-operations.md
+  - aidbox-provider-skill/subscriptions.md
+  - aidbox-provider-skill/orgbac.md
+  - aidbox-provider-skill/far-api.md
+  - aidbox-provider-skill/mcp-setup.md
+  - aidbox-provider-skill/troubleshooting.md
 skills:
 - file: aidbox-create-and-read-patient.md
   name: Create and read a FHIR Patient
   api: fhir/aidbox-capabilitystatement.json
   operations: [create-fhir-resource, read-fhir-resource]
+  method: generated
 - file: aidbox-search-fhir.md
   name: Search FHIR resources
   api: fhir/aidbox-capabilitystatement.json
   operations: [search-fhir-resources]
+  method: generated
 - file: aidbox-conditional-upsert.md
   name: Idempotent conditional upsert
   api: fhir/aidbox-capabilitystatement.json
   operations: [conditional-update-fhir-resource, validate-fhir-resource]
+  method: generated
 - file: aidbox-bulk-export.md
   name: Bulk-export FHIR data
   api: fhir/aidbox-capabilitystatement.json
   operations: [start-patient-level-export]
+  method: generated

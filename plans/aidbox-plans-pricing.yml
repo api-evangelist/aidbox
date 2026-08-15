@@ -1,0 +1,56 @@
+generated: '2026-08-14'
+method: searched
+source: https://www.health-samurai.io/docs/aidbox/getting-started/editions-and-pricing
+note: >-
+  Aidbox is licensed software (self-hosted, Aidbox-hosted SaaS, or AWS Marketplace),
+  not a metered per-call API product, so plans below are license editions plus a
+  separate support-tier ladder rather than request-quota tiers. Exact production
+  dollar figures are not published on this page; where the docs say "contact us",
+  that is recorded rather than guessed.
+plan_count: 7
+licenses:
+- name: Development
+  price: 0
+  currency: USD
+  billing_period: perpetual
+  included: Development, testing, and demonstration use only.
+  limits:
+  - up to 5 GB of data in the database
+  - no PHI (Protected Health Information) permitted
+- name: Production
+  price: null
+  currency: USD
+  billing_period: 14-day trial, then extended by the Health Samurai team
+  included: Production usage with PHI data.
+  limits:
+  - contact Health Samurai for pricing/details
+- name: Aidbox as SaaS
+  price: null
+  currency: USD
+  billing_period: unknown
+  included: Turn-key production-ready managed deployment, available via AWS.
+  limits: []
+- name: Educational
+  price: null
+  currency: USD
+  billing_period: unknown
+  included: Instructional and non-commercial academic research use for non-profit institutions.
+  limits:
+  - contact Health Samurai to qualify
+support_tiers:
+- name: Basic
+  price: 0
+  currency: USD
+  included: Account manager; basic consulting.
+  trial_period: 1 month
+- name: Professional
+  price: null
+  currency: USD
+  included: Chat with engineers; monthly video calls; priority bug fixes; priority release of the next three Aidbox feature releases.
+  trial_period: 2 months
+- name: Enterprise
+  price: null
+  currency: USD
+  included: Chat with engineers; weekly conferences; product enhancement work; FHIR consulting.
+  trial_period: 3 months
+docs: https://www.health-samurai.io/docs/aidbox/getting-started/editions-and-pricing

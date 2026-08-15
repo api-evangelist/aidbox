@@ -1,10 +1,16 @@
-generated: '2026-07-24'
+generated: '2026-08-14'
 method: searched
-source: npm, PyPI, and the Aidbox GitHub organization (https://github.com/Aidbox)
+source: >-
+  registry.npmjs.org, pypi.org/pypi, and GitHub Releases API
+  (https://api.github.com/repos/Aidbox/...) queried live 2026-08-14
 note: >-
   First-party Aidbox client SDKs and code-generation tooling from Health Samurai.
   Language coverage spans JavaScript/TypeScript, Python, .NET, and Clojure, plus a
   polyglot SDK generator that emits typed clients from a box's FHIR profiles.
+  version/published are read from each package's own registry metadata endpoint;
+  where a package has no package-registry listing (github-only distribution), version
+  is read from GitHub Releases where one exists, else recorded null with a note - an
+  honest gap, not a guess.
 packages:
 - language: javascript
   registry: npm
@@ -12,20 +18,30 @@ packages:
   url: https://www.npmjs.com/package/@aidbox/client-sdk-js
   install: npm install @aidbox/client-sdk-js
   official: true
+  version: 1.2.11
+  published: '2021-07-30'
   description: Aidbox client SDK for JavaScript/TypeScript browser and Node clients.
+  note: >-
+    Latest npm publish is from 2021 - over 5 years stale against the actively-released
+    (monthly CalVer) Aidbox platform; a strong abandonment signal for this SDK specifically.
 - language: javascript
   registry: npm
   name: "@aidbox/node-server-sdk"
   url: https://www.npmjs.com/package/@aidbox/node-server-sdk
   install: npm install @aidbox/node-server-sdk
   official: true
+  version: 2.1.2
+  published: '2023-05-03'
   description: Node.js server SDK for building Aidbox apps and subscription handlers.
+  note: Latest npm publish is from 2023 - over 3 years stale against the monthly Aidbox release cadence.
 - language: python
   registry: pypi
   name: aidbox-python-sdk
   url: https://pypi.org/project/aidbox-python-sdk/
   install: pip install aidbox-python-sdk
   official: true
+  version: 0.2.3
+  published: '2026-06-02'
   description: Python SDK for building Aidbox apps (aiohttp-based) against the Aidbox API.
 - language: python
   registry: github
@@ -33,34 +49,49 @@ packages:
   url: https://github.com/Aidbox/aidbox-python
   install: pip install git+https://github.com/Aidbox/aidbox-python
   official: true
+  version: null
+  published: null
   description: Pythonic FHIR/Aidbox resource client (Patient CRUD, search, operations).
+  note: No package registry listing and no GitHub Releases/tags published; source-only distribution, unpinned to any version - a consumer cannot tell what they are getting either.
 - language: typescript
   registry: github
   name: aidbox-sdk-js
   url: https://github.com/Aidbox/aidbox-sdk-js
   install: see repository
   official: true
+  version: null
+  published: null
   description: Typed Aidbox JavaScript/TypeScript SDK generated from a box's FHIR types.
+  note: No package registry listing and no GitHub Releases published (checked via GitHub API); source-only, unpinned.
 - language: dotnet
   registry: github
   name: fhirsharp
   url: https://github.com/Aidbox/fhirsharp
   install: see repository
   official: true
+  version: null
+  published: null
   description: .NET / C# FHIR client tooling for Aidbox.
+  note: Not listed on NuGet (checked); no GitHub Releases published; source-only, unpinned.
 - language: clojure
   registry: github
   name: aidbox-clojure-sdk
   url: https://github.com/Aidbox/aidbox-clojure-sdk
   install: see repository
   official: true
+  version: null
+  published: null
   description: Clojure SDK for Aidbox app development.
+  note: Not listed on Clojars (checked); no GitHub Releases published; source-only, unpinned.
 - language: polyglot
   registry: github
   name: aidbox-sdk
   url: https://github.com/Aidbox/aidbox-sdk
   install: "aidbox-sdk generate <target-language> <input-source> --auth-token <token>"
   official: true
+  version: v0.1.16
+  published: '2024-11-08'
   description: >-
     Aidbox SDK Generator - emits typed client SDKs in multiple target languages from a
     box's FHIRSchema/profiles (distributed as a precompiled binary or a runnable JAR).
+  note: Latest GitHub Release is from 2024-11-08 (via GitHub Releases API) - nearly 2 years stale.

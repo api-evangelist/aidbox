@@ -33,7 +33,7 @@ tags:
 - Digital Health
 created: '2026-07-24'
 modified: '2026-08-14'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 apis:
 - aid: aidbox:aidbox-fhir-api
   name: Aidbox FHIR API

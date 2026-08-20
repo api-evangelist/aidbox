@@ -126,6 +126,10 @@ apis:
   baseURL: https://sandbox.aidbox.app
   tags:
   - Healthcare
+  - Subscription
+  - Notification
+  tags_raw:
+  - Healthcare
   - Subscriptions
   - Notifications
   properties:

@@ -2,44 +2,39 @@ generated: '2026-08-14'
 method: searched
 source: live probes of sandbox.aidbox.app/.well-known/* and www.health-samurai.io/.well-known/*
 host: https://sandbox.aidbox.app
-note: >-
-  Aidbox is deployed software, not a single multi-tenant endpoint. These documents
-  come from the public reference deployment (sandbox.aidbox.app); every self-hosted or
-  Aidbox-hosted box publishes its own equivalents rooted at its own FHIR base URL. The
-  marketing/docs host (www.health-samurai.io) was also probed and serves none of these
-  paths (all 404), as expected for a docs site rather than an API host.
-documents:
-- path: /.well-known/smart-configuration
-  description: SMART App Launch discovery (SMART-on-FHIR)
-  status: 200
-  file: aidbox-smart-configuration.json
-- path: /.well-known/openid-configuration
-  description: OpenID Connect discovery (RFC 8414 / OIDC Discovery)
-  status: 200
-  file: aidbox-openid-configuration.json
-- path: /.well-known/oauth-authorization-server
-  description: OAuth 2.0 Authorization Server Metadata (RFC 8414)
-  status: 200
-  file: aidbox-oauth-authorization-server.json
-- path: /.well-known/jwks.json
-  description: JSON Web Key Set for token/id_token signature verification
-  status: 200
-  file: aidbox-jwks.json
-- path: /.well-known/security.txt
-  description: RFC 9116 security contact
-  status: 404
-- path: /.well-known/oauth-protected-resource
-  description: OAuth 2.0 Protected Resource Metadata (RFC 9728)
-  status: 404
-- path: /.well-known/api-catalog
-  description: RFC 9727 API catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  description: ChatGPT plugin manifest
-  status: 404
-- path: /.well-known/agent-card.json
-  description: A2A Agent Card (1.0.0 canonical path)
-  status: 404
-- path: /.well-known/agent.json
-  description: A2A Agent Card (pre-0.3 legacy path)
-  status: 404
+note: Aidbox is deployed software, not a single multi-tenant endpoint. These documents come from the public
+  reference deployment (sandbox.aidbox.app); every self-hosted or Aidbox-hosted box publishes its own
+  equivalents rooted at its own FHIR base URL. The marketing/docs host (www.health-samurai.io) was also
+  probed and serves none of these paths (all 404), as expected for a docs site rather than an API host.
+hosts:
+- host: https://sandbox.aidbox.app
+  documents:
+  - path: /.well-known/smart-configuration
+    status: 200
+    file: aidbox-smart-configuration.json
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: aidbox-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: aidbox-oauth-authorization-server.json
+  - path: /.well-known/jwks.json
+    status: 200
+    file: aidbox-jwks.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.

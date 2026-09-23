@@ -49,20 +49,7 @@ tools:
   since: '2509'
 deployment:
   mode: remote
-  endpoint: null
-  endpoint_note: >-
-    No single fixed endpoint - Aidbox is self-/vendor-hosted software, so the MCP
-    endpoint is <your-box-base-url>/mcp on whichever box a customer deploys. The
-    public reference box (sandbox.aidbox.app) does not expose /mcp anonymously
-    (confirmed 2026-08-14: POST /mcp -> 404 "not found").
-  install: null
-  package: null
-  auth: unknown
-  auth_note: >-
-    Per module docs, public endpoints require no credentials while restricted
-    endpoints require a Bearer token governed by Aidbox AccessPolicy/Client config;
-    which applies is deployment-specific, not fixed.
   verified: searched
   tools: 9
-  checked: '2026-08-14'
+  checked: '2026-08-12'
   source: catalog MCP census

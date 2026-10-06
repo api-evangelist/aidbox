@@ -59,7 +59,7 @@ tags:
 - Terminology
 - Digital Health
 created: '2026-07-24'
-modified: '2026-08-14'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: aidbox:aidbox-fhir-api
@@ -176,6 +176,8 @@ apis:
   - type: Documentation
     url: https://www.health-samurai.io/docs/aidbox/modules/terminology
 common:
+- url: https://www.health-samurai.io:443/rss.xml
+  type: BlogRSS
 - type: DomainSecurity
   url: security/aidbox-domain-security.yml
 - type: Website

@@ -38,16 +38,246 @@ edges:
     detected: '2026-10-18'
   detected_by: sweep-official-sdks.py
   first_seen: '2026-10-18'
+- partner_name: FHIR package registry (packages.fhir.org)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://packages.fhir.org/io.health-samurai.core.r3
+  category: HL7 FHIR package / implementation guide publisher
+  contract_reference:
+    register: FHIR package registry (packages.fhir.org / packages2.fhir.org catalog + each package's own package.json)
+    standard: HL7 FHIR (conformance packages / implementation guides)
+    spec_file: null
+    role: fhir-package-publisher
+    registered_name: Health Samurai
+    matched_domain: health-samurai.io
+    matched_by: domain
+    packages:
+    - package: io.health-samurai.core.r3
+      latest_version: 0.2609.1
+      fhir_version: 3.0.2
+      canonical: http://health-samurai.io/fhir/core
+      versions: 37
+      first_release: '2026-01-30'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.core.r4
+      latest_version: 0.2609.1
+      fhir_version: 4.0.1
+      canonical: http://health-samurai.io/fhir/core
+      versions: 37
+      first_release: '2026-01-30'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.core.r4b
+      latest_version: 0.2609.1
+      fhir_version: 4.3.0
+      canonical: http://health-samurai.io/fhir/core
+      versions: 37
+      first_release: '2026-01-30'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.core.r5
+      latest_version: 0.2609.1
+      fhir_version: 5.0.0
+      canonical: http://health-samurai.io/fhir/core
+      versions: 37
+      first_release: '2026-01-30'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.core.r6
+      latest_version: 0.2609.1
+      fhir_version: 6.0.0-ballot5
+      canonical: http://health-samurai.io/fhir/core
+      versions: 9
+      first_release: '2026-08-06'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.de-identification.r4
+      latest_version: 0.2603.0
+      fhir_version: 4.0.1
+      canonical: http://health-samurai.io/fhir/de-identification
+      versions: 1
+      first_release: '2026-04-21'
+      latest_release: '2026-04-21'
+      builds_on_base_ig: null
+    - package: io.health-samurai.legacy.r3
+      latest_version: 0.2609.1
+      fhir_version: 3.0.2
+      canonical: http://health-samurai.io/fhir/legacy
+      versions: 29
+      first_release: '2026-05-05'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.legacy.r4
+      latest_version: 0.2609.1
+      fhir_version: 4.0.1
+      canonical: http://health-samurai.io/fhir/legacy
+      versions: 29
+      first_release: '2026-05-05'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.legacy.r4b
+      latest_version: 0.2609.1
+      fhir_version: 4.3.0
+      canonical: http://health-samurai.io/fhir/legacy
+      versions: 29
+      first_release: '2026-05-05'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.legacy.r5
+      latest_version: 0.2609.1
+      fhir_version: 5.0.0
+      canonical: http://health-samurai.io/fhir/legacy
+      versions: 29
+      first_release: '2026-05-05'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.legacy.r6
+      latest_version: 0.2609.1
+      fhir_version: 6.0.0-ballot5
+      canonical: http://health-samurai.io/fhir/legacy
+      versions: 9
+      first_release: '2026-08-06'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.mdm.r3
+      latest_version: 0.2605.12
+      fhir_version: 3.0.2
+      canonical: http://health-samurai.io/fhir/mdm
+      versions: 22
+      first_release: '2026-01-30'
+      latest_release: '2026-10-12'
+      builds_on_base_ig: null
+    - package: io.health-samurai.mdm.r4
+      latest_version: 0.2605.12
+      fhir_version: 4.0.1
+      canonical: http://health-samurai.io/fhir/mdm
+      versions: 22
+      first_release: '2026-01-30'
+      latest_release: '2026-10-12'
+      builds_on_base_ig: null
+    - package: io.health-samurai.mdm.r4b
+      latest_version: 0.2605.12
+      fhir_version: 4.3.0
+      canonical: http://health-samurai.io/fhir/mdm
+      versions: 22
+      first_release: '2026-01-30'
+      latest_release: '2026-10-12'
+      builds_on_base_ig: null
+    - package: io.health-samurai.mdm.r5
+      latest_version: 0.2605.12
+      fhir_version: 5.0.0
+      canonical: http://health-samurai.io/fhir/mdm
+      versions: 22
+      first_release: '2026-01-30'
+      latest_release: '2026-10-12'
+      builds_on_base_ig: null
+    - package: io.health-samurai.multibox.r3
+      latest_version: 0.2609.1
+      fhir_version: 3.0.2
+      canonical: http://health-samurai.io/fhir/multibox
+      versions: 15
+      first_release: '2026-07-01'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.multibox.r4
+      latest_version: 0.2609.1
+      fhir_version: 4.0.1
+      canonical: http://health-samurai.io/fhir/multibox
+      versions: 15
+      first_release: '2026-07-01'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.multibox.r4b
+      latest_version: 0.2609.1
+      fhir_version: 4.3.0
+      canonical: http://health-samurai.io/fhir/multibox
+      versions: 15
+      first_release: '2026-07-01'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.multibox.r5
+      latest_version: 0.2609.1
+      fhir_version: 5.0.0
+      canonical: http://health-samurai.io/fhir/multibox
+      versions: 15
+      first_release: '2026-07-01'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.multibox.r6
+      latest_version: 0.2609.1
+      fhir_version: 6.0.0-ballot5
+      canonical: http://health-samurai.io/fhir/multibox
+      versions: 9
+      first_release: '2026-08-06'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.sdc.r3
+      latest_version: 0.2609.1
+      fhir_version: 3.0.2
+      canonical: http://health-samurai.io/fhir/sdc
+      versions: 37
+      first_release: '2026-01-30'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.sdc.r4
+      latest_version: 0.2609.1
+      fhir_version: 4.0.1
+      canonical: http://health-samurai.io/fhir/sdc
+      versions: 37
+      first_release: '2026-01-30'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.sdc.r4b
+      latest_version: 0.2609.1
+      fhir_version: 4.3.0
+      canonical: http://health-samurai.io/fhir/sdc
+      versions: 37
+      first_release: '2026-01-30'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.sdc.r5
+      latest_version: 0.2609.1
+      fhir_version: 5.0.0
+      canonical: http://health-samurai.io/fhir/sdc
+      versions: 37
+      first_release: '2026-01-30'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    - package: io.health-samurai.sdc.r6
+      latest_version: 0.2609.1
+      fhir_version: 6.0.0-ballot5
+      canonical: http://health-samurai.io/fhir/sdc
+      versions: 9
+      first_release: '2026-08-06'
+      latest_release: '2026-10-15'
+      builds_on_base_ig: null
+    package_count: 25
+    latest_release: '2026-10-15'
+    stale: false
+    certified_products: []
+    signal_note: 'participation only: the provider publishes its own FHIR package(s) to the public registry (publisher
+      = the package.json author, matched by the package''s canonical / url / homepage domain). A dependency on US
+      Core or a national base IG is self-declared building-on, not certified conformance; no register in this market
+      certifies conformance, so certified_products is empty by rule'
+    detected_by: sweep-fhir-implementation-guides.py
+    detected: '2026-10-22'
+  detected_by: sweep-fhir-implementation-guides.py
+  first_seen: '2026-10-22'
 generated: '2026-10-18'
 method: searched
 source:
-- https://api.nuget.org/v3
-- https://crates.io/api/v1
-- https://proxy.golang.org
-- https://pypi.org/pypi
 - https://registry.npmjs.org
-- https://repo1.maven.org/maven2
+- https://pypi.org/pypi
 - https://rubygems.org/api/v1
+- https://crates.io/api/v1
+- https://repo1.maven.org/maven2
+- https://api.nuget.org/v3
+- https://proxy.golang.org
 checked:
 - https://api.nuget.org/v3
 - https://crates.io/api/v1
@@ -56,3 +286,8 @@ checked:
 - https://registry.npmjs.org
 - https://repo1.maven.org/maven2
 - https://rubygems.org/api/v1
+- https://build.fhir.org/ig/qas.json
+- https://packages.fhir.org/catalog?name=
+- https://packages2.fhir.org/packages/catalog?name=
+- https://simplifier.net/search
+- https://simplifier.net/sitemap/organizations.xml

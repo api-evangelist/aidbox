@@ -64,31 +64,140 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aidbox is a production-ready FHIR platform and clinical data backend from Health Samurai, built on PostgreSQL for high-load medical products and integrations. It is used by digital health startups, healthcare providers, payers, and life-sciences teams — with the United States as a primary market — to build interoperable healthcare applications on HL7 FHIR.
+Aidbox is a production-ready FHIR platform and clinical data backend from Health Samurai, used by digital health startups, providers, payers, and life-sciences teams to build interoperable healthcare products in the United States and globally. Built on PostgreSQL, Aidbox exposes a full HL7 FHIR REST API (R4, R5, and R6) plus Aidbox-native SQL search, SQL-on-FHIR, a GraphQL API, Bulk Data export/import, topic-based Subscriptions, and terminology services. It is self-hosted or Aidbox-hosted software rather than a single public multi-tenant endpoint, so each deployment serves its own FHIR base and its own CapabilityStatement; a public sandbox (sandbox.aidbox.app) exposes a live FHIR R4 CapabilityStatement and a SMART-on-FHIR / OpenID .well-known configuration. Authentication is OAuth 2.0 with SMART-on-FHIR support (patient/user/system scopes, EHR and standalone launch, client-confidential and client-public flows). Aidbox aligns with US interoperability needs (US Core, SMART App Launch, Bulk Data) and is HIPAA-oriented, HITRUST and SOC 2 focused. This profile catalogs the documented, real API surface only.
 
-Aidbox is self-hosted or Aidbox-hosted software rather than a single public multi-tenant API, so every deployment serves its own FHIR base URL and its own FHIR CapabilityStatement. A public sandbox at `sandbox.aidbox.app` exposes a live FHIR R4 (4.0.1) CapabilityStatement (138 supported resource types) and a SMART-on-FHIR / OpenID `.well-known` configuration.
+**Areas:** Healthcare · United States · FHIR · HL7 · Interoperability · SMART on FHIR · Electronic Health Records · Health Data · FHIR Server · Bulk Data · Terminology · Digital Health
 
-## APIs
+## Aidbox on APIs.io
 
-- **Aidbox FHIR API** — HL7 FHIR REST API (R4/R5/R6): CRUD, search, transaction/batch bundles, and operations ($validate, $everything, $document, $lastn).
-- **Aidbox REST & Search API** — Aidbox-native REST plus SQL-based search for performance-optimized, complex custom queries.
-- **Aidbox SQL-on-FHIR API** — SQL queries directly against FHIR data, treating resources as relational tables.
-- **Aidbox GraphQL API** — GraphQL over FHIR data for precise, single-call retrieval across related resources.
-- **Aidbox Bulk Data API** — FHIR Bulk Data export/import ($export, import/load, dump utilities).
-- **Aidbox Topic-Based Subscriptions API** — event-driven notifications on FHIR resource changes across multiple channels.
-- **Aidbox Terminology API** — CodeSystem, ValueSet, and ConceptMap services with validation and lookup.
+Everything profiled for Aidbox is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aidbox/](https://apis.io/providers/aidbox/)** — or go straight to one of the APIs or properties below.
 
-## Authentication
+### APIs (7)
 
-OAuth 2.0 with SMART-on-FHIR. The sandbox `.well-known/smart-configuration` advertises SMART App Launch capabilities (EHR and standalone launch, client-confidential symmetric/asymmetric, client-public, SSO OpenID Connect) and scopes including `patient/*.cruds`, `user/*.cruds`, `system/*.cruds`, `launch`, `launch/patient`, `fhirUser`, and `offline_access`.
+- [Aidbox FHIR API](https://apis.io/apis/aidbox/aidbox-fhir-api/) — Aidbox's HL7 FHIR REST API for creating, reading, updating, deleting, and searching clinical and administrative resources. Supports FHIR R4 (4.0.1), R5, and…
+- [Aidbox REST & Search API](https://apis.io/apis/aidbox/aidbox-rest-search-api/) — Aidbox-native REST and search API offering CRUD over resources plus SQL-based search implementations for performance optimization and complex custom queries…
+- [Aidbox SQL-on-FHIR API](https://apis.io/apis/aidbox/aidbox-sql-on-fhir-api/) — SQL-on-FHIR support that lets clients run SQL queries directly against FHIR data, treating FHIR resources as relational tables for analytics and reporting.
+- [Aidbox GraphQL API](https://apis.io/apis/aidbox/aidbox-graphql-api/) — A GraphQL API over FHIR data that lets clients request exactly the data they need across related resources in a single call.
+- [Aidbox Bulk Data API](https://apis.io/apis/aidbox/aidbox-bulk-data-api/) — FHIR Bulk Data API for large-scale export and import of FHIR resources, including $export, FHIR import/load, and dump utilities for moving datasets in and…
+- [Aidbox Topic-Based Subscriptions API](https://apis.io/apis/aidbox/aidbox-subscriptions-api/) — FHIR topic-based Subscriptions that deliver notifications on changes to FHIR resources through multiple channels for event-driven healthcare integrations.
+- [Aidbox Terminology API](https://apis.io/apis/aidbox/aidbox-terminology-api/) — Terminology services for working with FHIR CodeSystems, ValueSets, and ConceptMaps, including validation and lookup against clinical terminologies.
 
-## Links
+### Published properties
 
-- Website: https://www.health-samurai.io/
-- Documentation / Developer Portal: https://www.health-samurai.io/docs/aidbox
-- API Reference: https://www.health-samurai.io/docs/aidbox/api-1/api
-- Getting Started: https://www.health-samurai.io/docs/aidbox/getting-started
-- Status: https://status.aidbox.app/
-- GitHub: https://github.com/Aidbox
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Harvested machine-readable contracts are stored under `fhir/`.
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Aidbox Subscriptions Webhooks](https://apis.io/asyncapis/aidbox/aidbox-subscriptions-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [aidbox-mcp](https://apis.io/servers/aidbox/aidbox-mcp/)
+
+#### Agent skills (1)
+
+Agent skills built on the API.
+
+- [aidbox](https://apis.io/agent-skills/aidbox/aidbox/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aidbox Authentication](https://apis.io/security/aidbox/aidbox-authentication/)
+- [Aidbox Domain Security](https://apis.io/security/aidbox/aidbox-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Aidbox Scopes](https://apis.io/scopes/aidbox/aidbox-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aidbox Plans Pricing](https://apis.io/plans/aidbox/aidbox-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aidbox Rate Limits](https://apis.io/rate-limits/aidbox/aidbox-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.health-samurai.io/)
+- [Documentation](https://www.health-samurai.io/docs/aidbox)
+- [Getting started](https://www.health-samurai.io/docs/aidbox/getting-started)
+- [API reference](https://www.health-samurai.io/docs/aidbox/api-1/api)
+- [Pricing](https://www.health-samurai.io/docs/aidbox/getting-started/editions-and-pricing)
+- [Sign up](https://aidbox.app/)
+- [Support](https://www.health-samurai.io/contacts)
+- [Blog](https://www.health-samurai.io/blog)
+- [Security](https://www.health-samurai.io/docs/aidbox/modules/security-and-access-control)
+- [Compliance](https://www.health-samurai.io/fhir-server)
+- [Privacy policy](https://www.health-samurai.io/legal/privacy-policy)
+- [GitHub](https://github.com/Aidbox)
+- [Status](https://status.aidbox.app/)
+
+## API Evangelist rating
+
+**Kin Score 57.8** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 76.7 |
+| Contract quality | 44.2 |
+| Contract governance | 18.2 |
+| Operational transparency | 60.5 |
+| Developer ergonomics | 78.6 |
+| Access clarity | 42.1 |
+
+**Agent readiness 41.6** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 44.5** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aidbox/](https://apis.io/providers/aidbox/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Aidbox: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aidbox/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).

@@ -129,6 +129,12 @@ Published request limits.
 
 - [Aidbox Rate Limits](https://apis.io/rate-limits/aidbox/aidbox-rate-limits/)
 
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Aidbox Finops](https://apis.io/finops/aidbox/aidbox-finops/)
+
 ## Where to find this API
 
 Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
@@ -149,18 +155,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 57.8** — strong · rubric 0.25.0 · scored 2026-10-23
+**Kin Score 61.7** — strong · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 76.7 |
 | Contract quality | 44.2 |
 | Contract governance | 18.2 |
-| Operational transparency | 60.5 |
+| Operational transparency | 57.1 |
 | Developer ergonomics | 78.6 |
-| Access clarity | 42.1 |
+| Access clarity | 63.8 |
 
-**Agent readiness 41.6** — agent-ready (gated down from agent-native)
+**Agent readiness 41.1** — agent-ready (gated down from agent-native)
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -185,6 +191,10 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | na |
 | Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | yes |
 
 **Regulatory alignment 44.5** — Health
 
